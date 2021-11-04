@@ -44,3 +44,9 @@ section {
 .active-img {
     border: 3px solid black;
 }
+
+.result{
+    background-color: #000;
+    color: #F2B60F;
+    padding: 10px;
+} 
