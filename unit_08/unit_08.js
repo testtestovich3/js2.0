@@ -23,11 +23,11 @@ document.querySelector(".b-1").onclick = t1;
 
 let out2 = document.querySelector(".out-2");
 function t2() {
-  let k = 0;
+  let k = 2;
   let outStr = "";
   while (k <= 46) {
-    outStr += k++ + "_";
-    k++;
+    outStr += k + "_";
+    k = k + 2;
   }
   out2.innerHTML = outStr;
 }
@@ -150,10 +150,10 @@ document.querySelector(".b-7").onclick = t7;
 //     4_5_6_7_8_
 // Задача решается с помощью цикла  while.
 
-let out8 = document.querySelector(".out-8");
-let i81 = +document.querySelector(".i-81").value;
-let i82 = +document.querySelector(".i-82").value;
 function t8() {
+  let out8 = document.querySelector(".out-8");
+  let i81 = +document.querySelector(".i-81").value;
+  let i82 = +document.querySelector(".i-82").value;
   let k = i81;
   let outStr = "";
   while (k <= i82) {
@@ -174,10 +174,10 @@ document.querySelector(".b-8").onclick = t8;
 // 6_7_8_
 // Задача решается с помощью цикла. Подсказка - вначале делаем проверку и при необходимости поменять местами значения в переменных местами, а потом запускаем цикл  while.
 
-let out9 = document.querySelector(".out-9");
-let i91 = +document.querySelector(".i-91").value;
-let i92 = +document.querySelector(".i-92").value;
 function t9() {
+  let out9 = document.querySelector(".out-9");
+  let i91 = +document.querySelector(".i-91").value;
+  let i92 = +document.querySelector(".i-92").value;
   if (i91 > i92) {
     let k = i92;
     let outStr = "";
