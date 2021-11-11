@@ -2,7 +2,7 @@
 //Создайте массив ar1 содержащий строки, числа, булевы значения. Выведите его в .out-1. Вывод - по нажатию кнопки b-1
 
 // let ar1 = // переменную обьявляем здесь!!!!
-let ar1 = ["Alex", 27, 1, 0];
+let ar1 = ["Alex", 27, true, false];
 
 function f1() {
   let out1 = document.querySelector(".out-1");
@@ -37,11 +37,7 @@ document.querySelector(".b-2").onclick = f2;
 let ar3 = [1, 2, 3];
 function f3() {
   let out3 = document.querySelector(".out-3");
-  let out = "";
-  for (let i = 0; i < ar3.length; i++) {
-    out += ar3[i] + " ";
-  }
-  out3.innerHTML = "Массив: " + out + "<br>Длина массива: " + ar3.length;
+  out3.innerHTML = ar3.length;
 }
 
 document.querySelector(".b-3").onclick = f3;
@@ -175,7 +171,7 @@ let ar10 = [100, 200, 300, 400, 700, 121];
 function f10() {
   let out10 = document.querySelector(".out-10");
 
-  out10.innerHTML = ar9[1] + ar9[ar9.length - 1];
+  out10.innerHTML = ar10[1] + ar10[ar10.length - 1];
 }
 
 document.querySelector(".b-10").onclick = f10;
@@ -260,7 +256,7 @@ function f14() {
 
   let out = "";
 
-  for (let i = 0; i < ar14.reverse().length; i++) {
+  for (let i = ar14.length - 1; i >= 0; i--) {
     out += ar14[i] + " ";
   }
   out14.innerHTML = out;
@@ -337,17 +333,15 @@ document.querySelector(".b-16").onclick = f16;
 let ar17 = [3, 0, 2, 6, 0, 1, 3, 1, 9, 0, 2, 0];
 
 function f17() {
-  let counter = 3;
+  let min = 3;
   let out17 = document.querySelector(".out-17");
-  let out = "";
+  let count = "";
   for (let i = 0; i < ar17.length; i++) {
-    if (ar17[i] > 0) {
-      if (ar17[i] > counter) {
-        out += ar17[i] + " ";
-      }
+    if (ar17[i] > min) {
+      count++;
     }
   }
-  out17.innerHTML = out;
+  out17.innerHTML = count;
 }
 
 document.querySelector(".b-17").onclick = f17;
