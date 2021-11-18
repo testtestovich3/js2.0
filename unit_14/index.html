@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/mustard-ui@latest/dist/css/mustard-ui.min.css"
+    />
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <link rel="stylesheet" href="https://itgid.info/css/skeleton.css" />
+    <link rel="stylesheet" href="https://itgid.info/css/style_js20.css" />
+    <!-- Ночной режим CSS удалите комментарий -->
+    <!-- <link rel="stylesheet" href="https://itgid.info/css/night.css" /> -->
+    <link rel="stylesheet" href="style.css" />
+    <title>Unit 14</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col col-lg-12 text-center">
+          <h1>Получаем прогноз погоды по API</h1>
+          <h2>JavaScript v2.0. Unit 14</h2>
+          <h3>js2.itgid.info</h3>
+        </div>
+      </div>
+      <p class="cd">
+        const cities = {<br />
+        625144: "Minsk",<br />
+        1220988: "Moskva",<br />
+        703448: "Kyiv",<br />
+        };<br />
+        <br />
+        const param = {<br />
+        url: "https://api.openweathermap.org/data/2.5/",<br />
+        appid: "459f68c624f3b00df3e8d1194383e81c",<br />
+        };<br />
+        <br />
+        let selectElement = document.createElement("select");<br />
+        selectElement.id = "city-two";<br />
+        let selectOption = "";<br />
+        for (let key in cities) {<br />
+        selectOption = document.createElement("option");<br />
+        let out = "";<br />
+        let out2 = "";<br />
+        for (let i = 0; i < cities[key].length; i++) {<br />
+        selectElement.appendChild(selectOption);<br />
+        out = key;<br />
+        out2 = cities[key];<br />
+        console.log(key + "->" + cities[key]);<br />
+        }<br />
+        <br />
+        selectOption.value = out;<br />
+        selectOption.innerHTML = out2;<br />
+        }<br />
+        <br />
+        document.body.append(selectElement);<br />
+        <br />
+        function getWeather() {<br />
+        const cityId = document.querySelector("#city-two").value;<br />
+        fetch(`${param.url}weather?id=${cityId}&units=metric&APPID=${param.appid}`)<br />
+        .then((weather) => {<br />
+        return weather.json();<br />
+        })<br />
+        .then(showWeather);<br />
+        }<br />
+        function showWeather(data) {<br />
+        document.querySelector(".temperatura").innerHTML = `${Math.round(<br />
+        data.main.temp<br />
+        )} &deg;`;<br />
+        document.querySelector(".wind-speed").textContent = `${data.wind.speed}
+        м/с`;<br />
+        document.querySelector(<br />
+        ".icon-class"<br />
+        ).innerHTML = `[img
+        src="https://openweathermap.org/img/wn/${data.weather[0]["icon"]}@2x.png"]`;<br />
+        }<br />
+        <br />
+        getWeather();<br />
+        document.querySelector("#city-two").onchange = getWeather;<br />
+      </p>
+      <div class="card out">
+        <p class="title-temperatura">Температура</p>
+        <p class="temperatura"></p>
+        <p class="title-wind-speed">Скорость ветра</p>
+        <p class="wind-speed"></p>
+        <div class="icon-class"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
