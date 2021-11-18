@@ -4,7 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="css/mustard-ui.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/mustard-ui@latest/dist/css/mustard-ui.min.css"
+    />
+    <link rel="stylesheet" href="https://itgid.info/css/skeleton.css" />
+    <link rel="stylesheet" href="https://itgid.info/css/style_js20.css" />
+    <!-- Ночной режим CSS удалите комментарий -->
+    <!-- <link rel="stylesheet" href="https://itgid.info/css/night.css" /> -->
     <link rel="stylesheet" href="css/style.css" />
     <title>Unit 04</title>
   </head>
@@ -24,6 +31,13 @@
           Создайте button.b-1 - при нажатии на него выводите alert с номером
           задачи. Номер задачи просто пропишите вручную.
         </p>
+        <p class="cd">
+          function f1() {<br />
+          alert("Задача №1");<br />
+          }<br />
+          <br />
+          document.querySelector(".b-1").onclick = f1;<br />
+        </p>
         <button class="button-primary b-1">Task-1</button>
       </section>
 
@@ -32,6 +46,13 @@
         <p>
           Создайте input.b-2 type=button - при нажатии на него выводите alert с
           номером задачи. Номер задачи просто пропишите вручную.
+        </p>
+        <p class="cd">
+          function f2() {<br />
+          alert("Задача №2");<br />
+          }<br />
+          <br />
+          document.querySelector(".b-2").onclick = f2;<br />
         </p>
         <div class="form-control">
           <input type="button" class="b-2 button-primary" value="Task-2" />
@@ -44,6 +65,13 @@
           Создайте p.p-3 - при нажатии на него выводите alert с номером задачи
           (И да, это он!!!).
         </p>
+        <p class="cd">
+          function f3() {<br />
+          alert("Задача №3");<br />
+          }<br />
+          <br />
+          document.querySelector(".p-3").onclick = f3;<br />
+        </p>
       </section>
 
       <section>
@@ -54,10 +82,25 @@
           в задачах, где не указано другое, осуществляется в div.out-номер
           задачи. В данном случае div.out-4
         </p>
+
         <div class="form-control">
           Input i-4 <input type="checkbox" class="i-4" />
         </div>
         <button class="button-primary b-4">Task-4</button>
+        <p class="cd">
+          function f4() {<br />
+          let i4 = document.querySelector(".i-4");<br />
+          let out4 = document.querySelector(".out-4");<br />
+          <br />
+          if (i4.checked) {<br />
+          out4.innerHTML = true;<br />
+          } else {<br />
+          out4.innerHTML = false;<br />
+          }<br />
+          }<br />
+          <br />
+          document.querySelector(".b-4").onclick = f4;<br />
+        </p>
         <div class="out-4"></div>
       </section>
 
@@ -74,6 +117,20 @@
           Input i-5 <input type="checkbox" class="i-5" value="task-5" />
         </div>
         <button class="button-primary b-5">Task-5</button>
+        <p class="cd">
+          function f5() {<br />
+          let i5 = document.querySelector(".i-5");<br />
+          let out5 = document.querySelector(".out-5");<br />
+          <br />
+          if (i5.checked) {<br />
+          out5.innerHTML = i5.value;<br />
+          } else {<br />
+          out5.innerHTML = false;<br />
+          }<br />
+          }<br />
+          <br />
+          document.querySelector(".b-5").onclick = f5;<br />
+        </p>
         <div class="out-5"></div>
       </section>
 
@@ -87,6 +144,16 @@
           Input i-6 <input type="hidden" class="i-6" value="8987" />
         </div>
         <button class="button-primary b-6">Task-6</button>
+        <p class="cd">
+          function f6() {<br />
+          let i6 = document.querySelector(".i-6");<br />
+          let out6 = document.querySelector(".out-6");<br />
+          <br />
+          out6.innerHTML = i6.value;<br />
+          }<br />
+          <br />
+          document.querySelector(".b-6").onclick = f6;<br />
+        </p>
         <div class="out-6"></div>
       </section>
 
@@ -102,6 +169,21 @@
           Input i-7 <input type="password" class="i-7" />
         </div>
         <button class="button-primary b-7">Task-7</button>
+        <p class="cd">
+          function f7() {<br />
+          let i7 = document.querySelector(".i-7");<br />
+          let out71 = document.querySelector(".out-71");<br />
+          let out72 = document.querySelector(".out-72");<br />
+          out71.innerHTML = i7.value;<br />
+          if (i7.value.length >= 6) {<br />
+          out72.innerHTML = 1;<br />
+          } else {<br />
+          out72.innerHTML = 0;<br />
+          }<br />
+          }<br />
+          <br />
+          document.querySelector(".b-7").onclick = f7;<br />
+        </p>
         <div class="out-71"></div>
         <div class="out-72"></div>
       </section>
@@ -115,6 +197,29 @@
           .out-81 выводить value созданного input.i-81.
         </p>
         <button class="button-primary b-8">Task-8</button>
+        <p class="cd">
+          function f8() {<br />
+          let out8 = document.querySelector(".out-8");<br />
+          out8.innerHTML =<br />
+          '[input type="text" class="i-81" /][br][button class="button-primary
+          b-81"]Task-81[/button]';<br />
+          // кнопку создаем через ....innerHTML = '[button....[/button]<br />
+          // т.е. как строку и в ставляем на страницу<br />
+          // потом получаем кнопку со страницы и вешаем событие<br />
+          // вашасозданнаякнопка.onclick = f81;<br />
+          //<br />
+          <br />
+          document.querySelector(".b-81").onclick = f81;<br />
+          }<br />
+          <br />
+          function f81() {<br />
+          let i81 = document.querySelector(".i-81");<br />
+          let out81 = document.querySelector(".out-81");<br />
+          out81.innerHTML = i81.value;<br />
+          }<br />
+          <br />
+          document.querySelector(".b-8").onclick = f8;<br />
+        </p>
         <div class="out-8"></div>
         <div class="out-81">Сюда будем выводить.</div>
       </section>
@@ -131,6 +236,20 @@
         </div>
 
         <button class="button-primary b-9">Task-9</button>
+        <p class="cd">
+          function f9() {<br />
+          let r9 = document.querySelector(".r-9");<br />
+          let out9 = document.querySelector(".out-9");<br />
+          <br />
+          if (r9.checked) {<br />
+          out9.innerHTML = r9.value;<br />
+          } else {<br />
+          out9.innerHTML = 0;<br />
+          }<br />
+          }<br />
+          <br />
+          document.querySelector(".b-9").onclick = f9;<br />
+        </p>
         <div class="out-9"></div>
       </section>
 
@@ -145,6 +264,16 @@
           Input i-10 <input type="color" class="i-10" />
         </div>
         <button class="button-primary b-10">Task-10</button>
+        <p class="cd">
+          function f10() {<br />
+          let i10 = document.querySelector(".i-10");<br />
+          let out10 = document.querySelector(".out-10");<br />
+          <br />
+          out10.style.backgroundColor = i10.value;<br />
+          }<br />
+          <br />
+          document.querySelector(".b-10").onclick = f10;<br />
+        </p>
         <div class="out-10">out-10</div>
       </section>
 
@@ -161,6 +290,16 @@
         <div class="form-control">
           Input i-112 <input type="color" class="i-112" />
         </div>
+        <p class="cd">
+          function f11() {<br />
+          let i111 = document.querySelector(".i-111");<br />
+          let i112 = document.querySelector(".i-112");<br />
+          <br />
+          i112.value = i111.value;<br />
+          }<br />
+          <br />
+          document.querySelector(".b-11").onclick = f11;<br />
+        </p>
         <button class="button-primary b-11">Task-11</button>
       </section>
 
@@ -174,6 +313,16 @@
           Input i-12 <input type="date" class="i-12" />
         </div>
         <button class="button-primary b-12">Task-12</button>
+        <p class="cd">
+          function f12() {<br />
+          let i12 = document.querySelector(".i-12");<br />
+          let out12 = document.querySelector(".out-12");<br />
+          <br />
+          out12.innerHTML = i12.value;<br />
+          }<br />
+          <br />
+          document.querySelector(".b-12").onclick = f12;<br />
+        </p>
         <div class="out-12"></div>
       </section>
 
@@ -186,6 +335,16 @@
         <div class="form-control">
           Input i-13 <input type="range" class="i-13" />
         </div>
+        <p class="cd">
+          function f13() {<br />
+          let i13 = document.querySelector(".i-13");<br />
+          let out13 = document.querySelector(".out-13");<br />
+          <br />
+          out13.innerHTML = i13.value;<br />
+          }<br />
+          <br />
+          document.querySelector(".i-13").oninput = f13;<br />
+        </p>
         <div class="out-13"></div>
       </section>
 
@@ -199,6 +358,16 @@
           textareat t-14 <textarea class="t-14"></textarea>
         </div>
         <button class="button-primary b-14">Task-14</button>
+        <p class="cd">
+          function f14() {<br />
+          let t14 = document.querySelector(".t-14");<br />
+          let out14 = document.querySelector(".out-14");<br />
+          <br />
+          out14.innerHTML = t14.value;<br />
+          }<br />
+          <br />
+          document.querySelector(".b-14").onclick = f14;<br />
+        </p>
         <div class="out-14"></div>
       </section>
 
@@ -216,6 +385,18 @@
           textarea t-15 <textarea class="t-15"></textarea>
         </div>
         <button class="button-primary b-15">Task-15</button>
+        <p class="cd">
+          function f15() {<br />
+          let t15 = document.querySelector(".t-15");<br />
+          let i15 = document.querySelector(".i-15");<br />
+          let out15 = document.querySelector(".out-15");<br />
+          <br />
+          t15.value = i15.value;<br />
+          out15.innerHTML = i15.value;<br />
+          }<br />
+          <br />
+          document.querySelector(".b-15").onclick = f15;<br />
+        </p>
         <div class="out-15"></div>
       </section>
 
@@ -234,6 +415,18 @@
           </select>
         </div>
         <button class="button-primary b-16">Task-16</button>
+        <p class="cd">
+          function f16() {<br />
+          let s16 = document.querySelector(".s-16");<br />
+          let out16 = document.querySelector(".out-16");<br />
+          <br />
+          out16.innerHTML = s16.value;<br />
+          // для получения выбранного option просто получите select в переменную
+          и select.value;<br />
+          }<br />
+          <br />
+          document.querySelector(".b-16").onclick = f16;<br />
+        </p>
         <div class="out-16"></div>
       </section>
 
@@ -252,6 +445,16 @@
             <option value="five">5</option>
           </select>
         </div>
+        <p class="cd">
+          function f17() {<br />
+          let s17 = document.querySelector(".s-17");<br />
+          let out17 = document.querySelector(".out-17");<br />
+          <br />
+          out17.innerHTML = s17.value;<br />
+          }<br />
+          <br />
+          document.querySelector(".s-17").onchange = f17;<br />
+        </p>
         <div class="out-17"></div>
       </section>
 
@@ -273,6 +476,16 @@
             Input i-18 <input type="text" class="i-18" />
           </div>
         </div>
+        <p class="cd">
+          function f18() {<br />
+          let s18 = document.querySelector(".s-18");<br />
+          let i18 = document.querySelector(".i-18");<br />
+          <br />
+          i18.value = s18.value;<br />
+          }<br />
+          <br />
+          document.querySelector(".s-18").onchange = f18;<br />
+        </p>
       </section>
 
       <section>
@@ -293,6 +506,17 @@
           </div>
         </form>
         <button class="button-primary b-19">Task-19</button>
+        <p class="cd">
+          function f19() {<br />
+          let i191 = document.querySelector(".i-191");<br />
+          let i192 = document.querySelector(".i-192");<br />
+          let out19 = document.querySelector(".out-19");<br />
+          <br />
+          out19.innerHTML = i191.value + " " + i192.value;<br />
+          }<br />
+          <br />
+          document.querySelector(".b-19").onclick = f19;<br />
+        </p>
         <div class="out-19"></div>
       </section>
 
@@ -317,6 +541,22 @@
 
           <button class="button-primary b-20">Task-20</button>
         </form>
+        <p class="cd">
+          function f20(e) {<br />
+          e.preventDefault(); // чтобы форма не перезагружала страницу!!!!<br />
+          let form = document.querySelector(".f-20");<br />
+          console.log(form.elements);<br />
+          console.log(form.elements["username"].value); // так можно обратиться
+          к элементу внутри формы<br />
+          <br />
+          let out20 = document.querySelector(".out-20");<br />
+          out20.innerHTML =<br />
+          form.elements["username"].value + " " +
+          form.elements["password"].value;<br />
+          }<br />
+          <br />
+          document.querySelector(".b-20").onclick = f20;<br />
+        </p>
         <div class="out-20"></div>
       </section>
     </div>

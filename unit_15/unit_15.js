@@ -78,9 +78,8 @@ let a6 = [
   3, 4, 1, 1, 4, 2, 2, 4, 5, 24, 5, 3, 22, 56,
 ];
 
-let s6 = new Set(a6);
-
 const f6 = () => {
+  let s6 = new Set(a6);
   document.querySelector(".out-6").innerHTML = s6.size;
 };
 

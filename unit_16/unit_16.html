@@ -1,132 +1,437 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://itgid.info/css/mustard-ui.min.css">
-    <link rel="stylesheet" href="https://itgid.info/css/js_2_0.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://itgid.info/css/mustard-ui.min.css" />
+    <!-- <link rel="stylesheet" href="css/style.css" /> -->
+    <link rel="stylesheet" href="https://itgid.info/css/skeleton.css" />
+    <link rel="stylesheet" href="https://itgid.info/css/style_js20.css" />
+    <!-- Ночной режим CSS удалите комментарий -->
+    <!-- <link rel="stylesheet" href="https://itgid.info/css/night.css" /> -->
     <title>Unit 16</title>
-</head>
+  </head>
 
-<body>
-<div class="container">
-    <h1>UNIT 16. ПЕРЕБОР МАССИВОВ: FOR, FOR IN, FOR OF</h1>
-    <h2><a href="https://itgid.info">ItGid.info</a></h2>
+  <body>
+    <div class="container">
+      <h1>UNIT 16. ПЕРЕБОР МАССИВОВ: FOR, FOR IN, FOR OF</h1>
+      <h2><a href="https://itgid.info">ItGid.info</a></h2>
 
-    <section>
+      <section>
         <p><b>Task 1.</b></p>
-        <p>При нажатии .b-1 выполняете функцию f1. Функция перебирает массив a1 c помощью цикла for (let i. Выведите на страницу в .out-1 формате значение+пробел.</p>
+        <p>
+          При нажатии .b-1 выполняете функцию f1. Функция перебирает массив a1 c
+          помощью цикла for (let i. Выведите на страницу в .out-1 формате
+          значение+пробел.
+        </p>
         <button class="button-primary b-1">Task-1</button>
+        <p class="cd">
+          let a1 = [5, 7, 9, 11, 13, 15];<br />
+          <br />
+          function f1() {<br />
+          let out = "";<br />
+          let out1 = document.querySelector(".out-1");<br />
+          for (let i = 0; i < a1.length; i++) {<br />
+          out += a1[i] + " ";<br />
+          }<br />
+          out1.innerHTML = out;<br />
+          }<br />
+          <br />
+          document.querySelector(".b-1").addEventListener("click", f1);<br />
+        </p>
         <div class="out-1"></div>
-    </section>
+      </section>
 
-    <section>
+      <section>
         <p><b>Task 2.</b></p>
-        <p>При нажатии .b-2 выполняете функцию f2. Функция перебирает массив a2 c помощью цикла for (let i. Выведите на страницу в .out-2 формате индекс+пробел+значение+пробел.</p>
+        <p>
+          При нажатии .b-2 выполняете функцию f2. Функция перебирает массив a2 c
+          помощью цикла for (let i. Выведите на страницу в .out-2 формате
+          индекс+пробел+значение+пробел.
+        </p>
         <button class="button-primary b-2">Task-2</button>
+        <p class="cd">
+          let a2 = [5, 7, 9, 11, 13, 15];<br />
+          <br />
+          function f2() {<br />
+          let out = "";<br />
+          let out2 = document.querySelector(".out-2");<br />
+          for (let i = 0; i < a2.length; i++) {<br />
+          out += i + " " + a2[i] + " ";<br />
+          }<br />
+          out2.innerHTML = out;<br />
+          }<br />
+          <br />
+          document.querySelector(".b-2").addEventListener("click", f2);<br />
+        </p>
         <div class="out-2"></div>
-    </section>
+      </section>
 
-    <section>
+      <section>
         <p><b>Task 3.</b></p>
-        <p>При нажатии .b-3 выполняете функцию f3. Функция получает div.out-3 со страницы с помощью
-            getElementsByClassName и в каждый записывает число 3, перезаписывая содержимое div.</p>
+        <p>
+          При нажатии .b-3 выполняете функцию f3. Функция получает div.out-3 со
+          страницы с помощью getElementsByClassName и в каждый записывает число
+          3, перезаписывая содержимое div.
+        </p>
         <button class="button-primary b-3">Task-3</button>
+        <p class="cd">
+          function f3() {<br />
+          let divOut3 = document.getElementsByClassName("out-3");<br />
+          console.log(divOut3);<br />
+          for (let i = 0; i < divOut3.length; i++) {<br />
+          divOut3[i].innerHTML = "3";<br />
+          }<br />
+          }<br />
+          <br />
+          document.querySelector(".b-3").addEventListener("click", f3);<br />
+        </p>
         <div class="out-3">out-3</div>
         <div class="out-3">out-3</div>
         <div class="out-3">out-3</div>
-    </section>
+      </section>
 
-    <section>
+      <section>
         <p><b>Task 4.</b></p>
-        <p>При нажатии .b-4 выполняете функцию f4. Функция получает div.out-4 со страницы с помощью querySelectorAll и в каждый дописывает число 4.</p>
+        <p>
+          При нажатии .b-4 выполняете функцию f4. Функция получает div.out-4 со
+          страницы с помощью querySelectorAll и в каждый дописывает число 4.
+        </p>
         <button class="button-primary b-4">Task-4</button>
+        <p class="cd">
+          function f4() {<br />
+          let divOut4 = document.querySelectorAll("div.out-4");<br />
+          for (let i = 0; i < divOut4.length; i++) {<br />
+          divOut4[i].innerHTML += 4;<br />
+          }<br />
+          console.log(divOut4);<br />
+          }<br />
+          <br />
+          document.querySelector(".b-4").addEventListener("click", f4);<br />
+        </p>
         <div class="out-4">out-4</div>
         <div class="out-4">out-4</div>
         <div class="out-4">out-4</div>
-    </section>
+      </section>
 
-    <section>
+      <section>
         <p><b>Task 5.</b></p>
-        <p>При нажатии .b-5 выполняете функцию f5. Функция должна с помощью for of перебрать массив a5 и возвратить новый массив куда входят элементы из a5 большие 7.</p>
+        <p>
+          При нажатии .b-5 выполняете функцию f5. Функция должна с помощью for
+          of перебрать массив a5 и возвратить новый массив куда входят элементы
+          из a5 большие 7.
+        </p>
         <button class="button-primary b-5">Task-5</button>
+        <p class="cd">
+          let a5 = [3, 4, 5, 2, 1, 7, 8, 2, 4, 6, 8, 11, 23, 17];<br />
+          <br />
+          function f5() {<br />
+          let newArr = [];<br />
+          for (let item of a5) {<br />
+          if (item > 7) {<br />
+          newArr.push(item);<br />
+          }<br />
+          }<br />
+          console.log(newArr);<br />
+          return newArr;<br />
+          }<br />
+          <br />
+          document.querySelector(".b-5").addEventListener("click", () => {<br />
+          document.querySelector(".out-5").innerHTML = f5();<br />
+          });<br />
+        </p>
         <div class="out-5"></div>
-    </section>
+      </section>
 
-    <section>
+      <section>
         <p><b>Task 6.</b></p>
-        <p>При нажатии .b-6 выполняете функцию f6. Функция должна превратить массив a6 в одномерный. Результат вывести в out-6 через пробел.</p>
+        <p>
+          При нажатии .b-6 выполняете функцию f6. Функция должна превратить
+          массив a6 в одномерный. Результат вывести в out-6 через пробел.
+        </p>
         <button class="button-primary b-6">Task-6</button>
+        <p class="cd">
+          let a6 = [<br />
+          [1, 2],<br />
+          [3, 4],<br />
+          [5, 6],<br />
+          ];<br />
+          <br />
+          function f6() {<br />
+          let out6 = document.querySelector(".out-6");<br />
+          let newArr = [];<br />
+          let out = "";<br />
+          for (let i = 0; i < a6.length; i++) {<br />
+          for (let k = 0; k < a6[i].length; k++) {<br />
+          newArr.push(a6[i][k]);<br />
+          }<br />
+          }<br />
+          a6 = newArr;<br />
+          for (let i = 0; i < a6.length; i++) {<br />
+          out += a6[i] += " ";<br />
+          }<br />
+          <br />
+          out6.innerHTML = out;<br />
+          console.log(newArr);<br />
+          }<br />
+          <br />
+          document.querySelector(".b-6").addEventListener("click", f6);<br />
+        </p>
         <div class="out-6"></div>
-    </section>
+      </section>
 
-    <section>
+      <section>
         <p><b>Task 7.</b></p>
-        <p>При нажатии .b-7 выполняете функцию f7. Функция должна переиндексировать массив a7. Что имеется ввиду. Сейчас у нас обычный массив, который содержит вложенные объекты. Вам необходимо сделать из a7 объект, где ключи - значения id из вложенных массивов, а значения - имя (т.е { 23 : Ivan, 45 : Petr}. Функция должна возвращать результирующий массив.</p>
+        <p>
+          При нажатии .b-7 выполняете функцию f7. Функция должна
+          переиндексировать массив a7. Что имеется ввиду. Сейчас у нас обычный
+          массив, который содержит вложенные объекты. Вам необходимо сделать из
+          a7 объект, где ключи - значения id из вложенных массивов, а значения -
+          имя (т.е { 23 : Ivan, 45 : Petr}. Функция должна возвращать
+          результирующий массив.
+        </p>
+        <p class="cd">
+          let a7 = [<br />
+          { id: 23, name: "Ivan" },<br />
+          { id: 45, name: "Petr" },<br />
+          ];<br />
+          <br />
+          function f7() {<br />
+          let obj7 = {};<br />
+          for (let i = 0; i < a7.length; i++) {<br />
+          obj7[a7[i]["id"]] = a7[i]["name"];<br />
+          }<br />
+          a7 = obj7;<br />
+          return a7;<br />
+          }<br />
+          <br />
+          document.querySelector(".b-7").addEventListener("click", () => {<br />
+          console.log(f7());<br />
+          });<br />
+        </p>
         <button class="button-primary b-7">Task-7</button>
-    </section>
+      </section>
 
-    <section>
+      <section>
         <p><b>Task 8.</b></p>
-        <p>При нажатии .b-8 выполняете функцию f8. Функция должна переиндексировать массив a8. Что имеется ввиду. Сейчас у нас обычный массив, который содержит вложенные объекты. Вам необходимо сделать из a8 массив, который будет содержать только числовые id. Т.е. [23, 45]. Функция должна возвращать результирующий массив.</p>
+        <p>
+          При нажатии .b-8 выполняете функцию f8. Функция должна
+          переиндексировать массив a8. Что имеется ввиду. Сейчас у нас обычный
+          массив, который содержит вложенные объекты. Вам необходимо сделать из
+          a8 массив, который будет содержать только числовые id. Т.е. [23, 45].
+          Функция должна возвращать результирующий массив.
+        </p>
+        <p class="cd">
+          let a8 = [<br />
+          { id: 23, name: "Ivan" },<br />
+          { id: 45, name: "Petr" },<br />
+          ];<br />
+          <br />
+          function f8() {<br />
+          let out = [];<br />
+          for (let i = 0; i < a8.length; i++) {<br />
+          out.push(a8[i]["id"]);<br />
+          }<br />
+          return out;<br />
+          }<br />
+          <br />
+          document.querySelector(".b-8").addEventListener("click", () => {<br />
+          console.log(f8());<br />
+          });<br />
+        </p>
         <button class="button-primary b-8">Task-8</button>
-    </section>
+      </section>
 
-    <section>
+      <section>
         <p><b>Task 9.</b></p>
-        <p>При нажатии .b-9 выполняете функцию f9. Функция должна возвращать в out-9 самый большой индекс из вложенных в a9 массивов. В данном случае это 4. Т.е. самый большой вложенный массив это [0,0,0,0,0], а в нем самый большой индекс 4.</p>
+        <p>
+          При нажатии .b-9 выполняете функцию f9. Функция должна возвращать в
+          out-9 самый большой индекс из вложенных в a9 массивов. В данном случае
+          это 4. Т.е. самый большой вложенный массив это [0,0,0,0,0], а в нем
+          самый большой индекс 4.
+        </p>
         <button class="button-primary b-9">Task-9</button>
+        <p class="cd">
+          let a9 = [<br />
+          [4, 3, 2],<br />
+          [2, 5],<br />
+          [0, 0, 0, 0, 0],<br />
+          ];<br />
+          <br />
+          function f9() {<br />
+          let max = a9[0].length;<br />
+          for (let item of a9) {<br />
+          if (max < item.length) {<br />
+          max = item.length;<br />
+          }<br />
+          }<br />
+          return max - 1;<br />
+          }<br />
+          <br />
+          document.querySelector(".b-9").addEventListener("click", () => {<br />
+          document.querySelector(".out-9").innerHTML = f9();<br />
+          });<br />
+        </p>
         <div class="out-9"></div>
-    </section>
+      </section>
 
-    <section>
+      <section>
         <p><b>Task 10.</b></p>
-        <p>При нажатии .b-10 выполняете функцию f10. Функция должна преобразовывать массив a10 в ассоциативный массив вида {4: 4, 6: 6, 9: 9, hello : "hello"} и возвращать полученный массив.</p>
+        <p>
+          При нажатии .b-10 выполняете функцию f10. Функция должна
+          преобразовывать массив a10 в ассоциативный массив вида {4: 4, 6: 6, 9:
+          9, hello : "hello"} и возвращать полученный массив.
+        </p>
+        <p class="cd">
+          let a10 = [4, 6, 9, "Hello"];<br />
+          <br />
+          function f10() {<br />
+          let a = {};<br />
+          for (let i = 0; i < a10.length; i++) {<br />
+          a[a10[i]] = a10[i];<br />
+          }<br />
+          a10 = a;<br />
+          return a10;<br />
+          }<br />
+          <br />
+          document.querySelector(".b-10").addEventListener("click", () => {<br />
+          console.log(f10());<br />
+          });<br />
+        </p>
         <button class="button-primary b-10">Task-10</button>
-    </section>
+      </section>
 
-    <section>
+      <section>
         <p><b>Task 11.</b></p>
-        <p>При нажатии .b-11 выполняете функцию f11. Функция должна c помощью for in перебрать объект a11 и вывести в out-11 только те значения, которые больше 10. Вывод - через пробел.</p>
+        <p>
+          При нажатии .b-11 выполняете функцию f11. Функция должна c помощью for
+          in перебрать объект a11 и вывести в out-11 только те значения, которые
+          больше 10. Вывод - через пробел.
+        </p>
         <button class="button-primary b-11">Task-11</button>
+        <p class="cd">
+          let a11 = {<br />
+          one: 11,<br />
+          two: 7,<br />
+          three: 13,<br />
+          four: 0,<br />
+          };<br />
+          <br />
+          function f11() {<br />
+          let out11 = document.querySelector(".out-11");<br />
+          let out = "";<br />
+          for (let key in a11) {<br />
+          if (a11[key] > 10) {<br />
+          out += a11[key] + " ";<br />
+          }<br />
+          }<br />
+          out11.innerHTML = out;<br />
+          }<br />
+          <br />
+          document.querySelector(".b-11").addEventListener("click", f11);<br />
+        </p>
         <div class="out-11"></div>
-    </section>
+      </section>
 
-    <section>
+      <section>
         <p><b>Task 12.</b></p>
-        <p>При нажатии .b-12 выполняете функцию f12. Функция должна c помощью for of перебрать a12 и вывести в out-12 через пробел.</p>
+        <p>
+          При нажатии .b-12 выполняете функцию f12. Функция должна c помощью for
+          of перебрать a12 и вывести в out-12 через пробел.
+        </p>
         <button class="button-primary b-12">Task-12</button>
+        <p class="cd">
+          let a12 = [4, 5, 6, 7];<br />
+          <br />
+          function f12() {<br />
+          let out12 = document.querySelector(".out-12");<br />
+          let out = "";<br />
+          for (let item of a12) {<br />
+          out += item + " ";<br />
+          }<br />
+          out12.innerHTML = out;<br />
+          }<br />
+          <br />
+          document.querySelector(".b-12").addEventListener("click", f12);<br />
+        </p>
         <div class="out-12"></div>
-    </section>
+      </section>
 
-    <section>
+      <section>
         <p><b>Task 13.</b></p>
-        <p>При нажатии .b-13 выполняете функцию f13. Функция должна c помощью for of перебрать a13 и вывести по символу в out-13 через пробел.</p>
+        <p>
+          При нажатии .b-13 выполняете функцию f13. Функция должна c помощью for
+          of перебрать a13 и вывести по символу в out-13 через пробел.
+        </p>
         <button class="button-primary b-13">Task-13</button>
+        <p class="cd">
+          let a13 = "testone";<br />
+          <br />
+          function f13() {<br />
+          let out13 = document.querySelector(".out-13");<br />
+          let out = "";<br />
+          for (let item of a13) {<br />
+          out += item + " ";<br />
+          }<br />
+          out13.innerHTML = out;<br />
+          }<br />
+          <br />
+          document.querySelector(".b-13").addEventListener("click", f13);<br />
+        </p>
         <div class="out-13"></div>
-    </section>
+      </section>
 
-    <section>
+      <section>
         <p><b>Task 14.</b></p>
-        <p>При нажатии .b-14 выполняете функцию f14. Функция должна c помощью for of перебрать a14 и вывести по элементам в out-14 через пробел.</p>
+        <p>
+          При нажатии .b-14 выполняете функцию f14. Функция должна c помощью for
+          of перебрать a14 и вывести по элементам в out-14 через пробел.
+        </p>
         <button class="button-primary b-14">Task-14</button>
+        <p class="cd">
+          let a14 = new Set([4, 5, 6]);<br />
+          <br />
+          function f14() {<br />
+          let out14 = document.querySelector(".out-14");<br />
+          let out = "";<br />
+          for (let item of a14) {<br />
+          out += item + " ";<br />
+          }<br />
+          out14.innerHTML = out;<br />
+          }<br />
+          <br />
+          document.querySelector(".b-14").addEventListener("click", f14);<br />
+        </p>
         <div class="out-14"></div>
-    </section>
+      </section>
 
-    <section>
+      <section>
         <p><b>Task 15.</b></p>
-        <p>При нажатии .b-15 выполняете функцию f15. Функция должна получить NodeList элементов .out-15 c помощью document.querySelectorAll, затем c помощью for of перебрать полученную коллекцию элементов .out-15 записать внутрь них число 15 (затерев содержимое).</p>
+        <p>
+          При нажатии .b-15 выполняете функцию f15. Функция должна получить
+          NodeList элементов .out-15 c помощью document.querySelectorAll, затем
+          c помощью for of перебрать полученную коллекцию элементов .out-15
+          записать внутрь них число 15 (затерев содержимое).
+        </p>
         <button class="button-primary b-15">Task-15</button>
+        <p class="cd">
+          function f15() {<br />
+          let divOut15 = document.querySelectorAll("div.out-15");<br />
+          for (let item of divOut15) {<br />
+          item.innerHTML = 15;<br />
+          }<br />
+          }<br />
+          <br />
+          document.querySelector(".b-15").addEventListener("click", f15);<br />
+        </p>
         <div class="out-15">out-15</div>
         <div class="out-15">out-15</div>
         <div class="out-15">out-15</div>
         <div class="out-15">out-15</div>
-    </section>
-</div>
+      </section>
+    </div>
 
-<script src="unit_16.js"></script>
-</body>
-
+    <script src="unit_16.js"></script>
+  </body>
 </html>

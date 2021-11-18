@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="css/mustard-ui.min.css" />
-    <link rel="stylesheet" href="css/style.css" />
+    <!-- <link rel="stylesheet" href="css/style.css" /> -->
+    <link rel="stylesheet" href="https://itgid.info/css/skeleton.css" />
+    <link rel="stylesheet" href="https://itgid.info/css/style_js20.css" />
+    <!-- Ночной режим CSS удалите комментарий -->
+    <!-- <link rel="stylesheet" href="https://itgid.info/css/night.css" /> -->
     <title>Unit 13</title>
   </head>
 
@@ -34,6 +38,19 @@ let a1 = {
 </pre
         >
         <button class="button-primary b-1">Task-1</button>
+        <p class="cd">
+          function f1() {<br />
+          let a1 = {<br />
+          one: 15,<br />
+          two: 16,<br />
+          five: 20,<br />
+          };<br />
+          document.querySelector(".out-1").innerHTML = a1.two;<br />
+          return a1.two;<br />
+          }<br />
+          <br />
+          document.querySelector(".b-1").onclick = f1;<br />
+        </p>
         <div class="out-1"></div>
       </section>
 
@@ -52,6 +69,21 @@ let a1 = {
 </pre
         >
         <button class="button-primary b-2">Task-2</button>
+        <p class="cd">
+          function f2() {<br />
+          let a2 = {<br />
+          one: "hello",<br />
+          two: "mahai",<br />
+          five: "hi",<br />
+          };<br />
+          document.querySelector(".out-2").innerHTML = a2.five;<br />
+          return a2.five;<br />
+          }<br />
+          <br />
+          document.querySelector(".b-2").onclick = () => {<br />
+          document.querySelector(".out-2").innerHTML = f2();<br />
+          };<br />
+        </p>
         <div class="out-2"></div>
       </section>
 
@@ -63,6 +95,29 @@ let a1 = {
           пробел.
         </p>
         <button class="button-primary b-3">Task-3</button>
+        <p class="cd">
+          function f3() {<br />
+          let a3 = {<br />
+          one: "hello",<br />
+          two: "mahai",<br />
+          five: "hi",<br />
+          test: 21,<br />
+          odd: "hi",<br />
+          mix: "mix",<br />
+          };<br />
+          let out = " ";<br />
+          for (let key in a3) {<br />
+          if ("hi" == a3[key]) {<br />
+          out += a3[key] + " ";<br />
+          }<br />
+          }<br />
+          return out;<br />
+          }<br />
+          <br />
+          document.querySelector(".b-3").onclick = () => {<br />
+          document.querySelector(".out-3").innerHTML = f3();<br />
+          };<br />
+        </p>
         <div class="out-3"></div>
       </section>
 
@@ -76,6 +131,27 @@ let a1 = {
         </p>
         <p>Обратите внимание на пробел перед br!!!!!!!!</p>
         <button class="button-primary b-4">Task-4</button>
+        <p class="cd">
+          let a4 = {<br />
+          one: "hello",<br />
+          two: "mahai",<br />
+          five: "hi",<br />
+          test: 21,<br />
+          odd: "hi",<br />
+          mix: "mix",<br />
+          };<br />
+          function f4() {<br />
+          let out = " ";<br />
+          for (let key in a4) {<br />
+          out += key + " " + a4[key] + " [br]";<br />
+          }<br />
+          return out;<br />
+          }<br />
+          <br />
+          document.querySelector(".b-4").onclick = () => {<br />
+          document.querySelector(".out-4").innerHTML = f4();<br />
+          };<br />
+        </p>
         <div class="out-4"></div>
       </section>
 
@@ -88,6 +164,25 @@ let a1 = {
           параметр).
         </p>
         <button class="button-primary b-5">Task-5</button>
+        <p class="cd">
+          function f5(arr, block) {<br />
+          let out = "";<br />
+          <br />
+          for (let key in arr) {<br />
+          out += `${key} : ${arr[key]} [br]`;<br />
+          }<br />
+          document.querySelector(block).innerHTML = out;<br />
+          <br />
+          }<br />
+          <br />
+          document.querySelector(".b-5").onclick = () => {<br />
+          let a5 = {<br />
+          one: 1,<br />
+          two: 2,<br />
+          };<br />
+          f5(a5, ".out-5");<br />
+          };<br />
+        </p>
         <div class="out-5"></div>
       </section>
 
@@ -106,6 +201,22 @@ let a1 = {
           Input i-62 <input type="text" class="i-62" />
         </div>
         <button class="button-primary b-6">Task-6</button>
+        <p class="cd">
+          let a6 = {<br />
+          b: 17,<br />
+          e: 22,<br />
+          };<br />
+          <br />
+          function f6() {<br />
+          let i61 = document.querySelector(".i-61").value;<br />
+          let i62 = document.querySelector(".i-62").value;<br />
+          <br />
+          a6[i61] = i62;<br />
+          f5(a6, ".out-6");<br />
+          }<br />
+          <br />
+          document.querySelector(".b-6").onclick = f6;<br />
+        </p>
         <div class="out-6"></div>
       </section>
 
@@ -120,6 +231,24 @@ let a1 = {
           Input i-7 <input type="text" class="i-7" />
         </div>
         <button class="button-primary b-7">Task-7</button>
+        <p class="cd">
+          let a7 = {<br />
+          b: 17,<br />
+          e: 22,<br />
+          };<br />
+          <br />
+          function f7() {<br />
+          let key = document.querySelector(".i-7").value;<br />
+          <br />
+          if (a7[key] !== undefined) {<br />
+          document.querySelector(".out-7").innerHTML = "1";<br />
+          } else {<br />
+          document.querySelector(".out-7").innerHTML = "0";<br />
+          }<br />
+          }<br />
+          <br />
+          document.querySelector(".b-7").onclick = f7;<br />
+        </p>
         <div class="out-7"></div>
       </section>
 
@@ -134,6 +263,27 @@ let a1 = {
           Input i-8 <input type="text" class="i-8" />
         </div>
         <button class="button-primary b-8">Task-8</button>
+        <p class="cd">
+          let a8 = {<br />
+          b: 17,<br />
+          e: 22,<br />
+          };<br />
+          <br />
+          function f8() {<br />
+          let i8 = document.querySelector(".i-8").value;<br />
+          let out8 = document.querySelector(".out-8");<br />
+          let out = "";<br />
+          <br />
+          if (a8[i8] !== undefined) {<br />
+          out += a8[i8];<br />
+          } else {<br />
+          out += 0;<br />
+          }<br />
+          out8.innerHTML = out;<br />
+          }<br />
+          <br />
+          document.querySelector(".b-8").onclick = f8;<br />
+        </p>
         <div class="out-8"></div>
       </section>
 
@@ -149,6 +299,30 @@ let a1 = {
           Input i-9 <input type="text" class="i-9" />
         </div>
         <button class="button-primary b-9">Task-9</button>
+        <p class="cd">
+          let a9 = {<br />
+          b: 17,<br />
+          e: 22,<br />
+          j: 17,<br />
+          k: 22,<br />
+          d: 54,<br />
+          };<br />
+          <br />
+          function f9() {<br />
+          let i9 = document.querySelector(".i-9").value;<br />
+          let out9 = document.querySelector(".out-9");<br />
+          let out = "";<br />
+          <br />
+          for (let key in a9) {<br />
+          if (a9[key] == i9) {<br />
+          out += key + " ";<br />
+          }<br />
+          }<br />
+          out9.innerHTML = out;<br />
+          }<br />
+          <br />
+          document.querySelector(".b-9").onclick = f9;<br />
+        </p>
         <div class="out-9"></div>
       </section>
 
@@ -161,6 +335,27 @@ let a1 = {
           качестве параметров.
         </p>
         <button class="button-primary b-10">Task-10</button>
+        <p class="cd">
+          function f10(arr, val) {<br />
+          for (let key in arr) {<br />
+          console.log(arr[key]);<br />
+          console.log(val);<br />
+          if (arr[key] == val) {<br />
+          return true;<br />
+          }<br />
+          }<br />
+          return false;<br />
+          }<br />
+          <br />
+          document.querySelector(".b-10").onclick = () => {<br />
+          let a10 = {<br />
+          k: 22,<br />
+          d: 54,<br />
+          m: 22,<br />
+          };<br />
+          document.querySelector(".out-10").innerHTML = f10(a10, 22);<br />
+          };<br />
+        </p>
         <div class="out-10">out-10</div>
       </section>
 
@@ -175,6 +370,26 @@ let a1 = {
           Input i-11 <input type="text" class="i-11" />
         </div>
         <button class="button-primary b-11">Task-11</button>
+        <p class="cd">
+          let a11 = {<br />
+          b: 17,<br />
+          e: 22,<br />
+          j: 17,<br />
+          k: 22,<br />
+          d: 54,<br />
+          };<br />
+          <br />
+          function f11() {<br />
+          let i11 = document.querySelector(".i-11").value;<br />
+          <br />
+          if (a11[i11] !== undefined) {<br />
+          delete a11[i11];<br />
+          }<br />
+          f5(a11, ".out-11");<br />
+          }<br />
+          <br />
+          document.querySelector(".b-11").onclick = f11;<br />
+        </p>
         <div class="out-11">out-11</div>
       </section>
 
@@ -191,6 +406,28 @@ let a1 = {
         </div>
 
         <button class="button-primary b-12">Task-12</button>
+        <p class="cd">
+          let a12 = {<br />
+          b: 17,<br />
+          e: 22,<br />
+          j: 17,<br />
+          k: 22,<br />
+          d: 17,<br />
+          };<br />
+          <br />
+          function f12() {<br />
+          let i12 = document.querySelector(".i-12").value;<br />
+          <br />
+          for (let key in a12) {<br />
+          if (a12[key] == i12) {<br />
+          delete a12[key];<br />
+          }<br />
+          }<br />
+          f5(a12, ".out-12");<br />
+          }<br />
+          <br />
+          document.querySelector(".b-12").onclick = f12;<br />
+        </p>
         <div class="out-12"></div>
       </section>
 
@@ -200,7 +437,30 @@ let a1 = {
           При нажатии b-13 выполняете функцию f13. Функция должна в out-13
           выводить сумму значений массива a13 (только числа).
         </p>
-        <button class="button-primary b-13">Task-14</button>
+        <button class="button-primary b-13">Task-13</button>
+        <p class="cd">
+          let a13 = {<br />
+          prim: "hello",<br />
+          one: 4,<br />
+          testt: "vodoley",<br />
+          ivan: 6,<br />
+          };<br />
+          <br />
+          function f13() {<br />
+          let out13 = document.querySelector(".out-13");<br />
+          let sum = 0;<br />
+          <br />
+          for (let key in a13) {<br />
+          if (typeof a13[key] == "number") {<br />
+          sum += a13[key];<br />
+          }<br />
+          }<br />
+          <br />
+          out13.innerHTML = sum;<br />
+          }<br />
+          <br />
+          document.querySelector(".b-13").onclick = f13;<br />
+        </p>
         <div class="out-13"></div>
       </section>
 
@@ -212,6 +472,26 @@ let a1 = {
           через пробел.
         </p>
         <button class="button-primary b-14">Task-14</button>
+        <p class="cd">
+          let a14 = {<br />
+          prim: [1, 2, 23],<br />
+          one: [3, 4, 5],<br />
+          testt: [6, 7, 8],<br />
+          ivan: [9, 10],<br />
+          };<br />
+          <br />
+          function f14() {<br />
+          let out14 = document.querySelector(".out-14");<br />
+          let out = "";<br />
+          <br />
+          for (let key in a14) {<br />
+          out += a14[key][0] + " ";<br />
+          }<br />
+          out14.innerHTML = out;<br />
+          }<br />
+          <br />
+          document.querySelector(".b-14").onclick = f14;<br />
+        </p>
         <div class="out-14"></div>
       </section>
 
@@ -222,6 +502,28 @@ let a1 = {
           выводить элементы вложенных массивов в a15. Вывод через пробел.
         </p>
         <button class="button-primary b-15">Task-15</button>
+        <p class="cd">
+          let a15 = {<br />
+          prim: [1, 2, 23],<br />
+          one: [3, 5],<br />
+          testt: [6, 7, 8],<br />
+          ivan: [9, 10],<br />
+          };<br />
+          <br />
+          function f15() {<br />
+          let out15 = document.querySelector(".out-15");<br />
+          let out = "";<br />
+          <br />
+          for (let key in a15) {<br />
+          for (let i = 0; i < a15[key].length; i++) {<br />
+          out += a15[key][i] + " ";<br />
+          }<br />
+          }<br />
+          out15.innerHTML = out;<br />
+          }<br />
+          <br />
+          document.querySelector(".b-15").onclick = f15;<br />
+        </p>
         <div class="out-15"></div>
       </section>
 
@@ -232,6 +534,34 @@ let a1 = {
           выводить элементы name вложенных массивов в a16. Вывод через пробел.
         </p>
         <button class="button-primary b-16">Task-16</button>
+        <p class="cd">
+          let a16 = {<br />
+          iis8sj: {<br />
+          name: "Ivan",<br />
+          age: 27,<br />
+          },<br />
+          iiss7j: {<br />
+          name: "Petr",<br />
+          age: 26,<br />
+          },<br />
+          s3s8sj: {<br />
+          name: "Serg",<br />
+          age: 47,<br />
+          },<br />
+          };<br />
+          <br />
+          function f16() {<br />
+          let out16 = document.querySelector(".out-16");<br />
+          let out = "";<br />
+          <br />
+          for (let key in a16) {<br />
+          out += a16[key]["name"] + " ";<br />
+          }<br />
+          out16.innerHTML = out;<br />
+          }<br />
+          <br />
+          document.querySelector(".b-16").onclick = f16;<br />
+        </p>
         <div class="out-16"></div>
       </section>
 
@@ -243,6 +573,36 @@ let a1 = {
           Вывод через пробел.
         </p>
         <button class="button-primary b-17">Task-17</button>
+        <p class="cd">
+          let a17 = {<br />
+          iis8sj: {<br />
+          name: "Ivan",<br />
+          age: 27,<br />
+          },<br />
+          iiss7j: {<br />
+          name: "Petr",<br />
+          age: 26,<br />
+          },<br />
+          s3s8sj: {<br />
+          name: "Serg",<br />
+          age: 47,<br />
+          },<br />
+          };<br />
+          <br />
+          function f17() {<br />
+          let out17 = document.querySelector(".out-17");<br />
+          let out = "";<br />
+          <br />
+          for (let key in a17) {<br />
+          if (a17[key]["age"] > 30) {<br />
+          out += a17[key]["name"] + " ";<br />
+          }<br />
+          }<br />
+          out17.innerHTML = out;<br />
+          }<br />
+          <br />
+          document.querySelector(".b-17").onclick = f17;<br />
+        </p>
         <div class="out-17"></div>
       </section>
 
@@ -258,6 +618,31 @@ let a1 = {
           Input i-18 <input type="text" class="i-18" />
         </div>
         <button class="button-primary b-18">Task-18</button>
+        <p class="cd">
+          let a18 = {<br />
+          red: ["Akademmistechko", "Nyvky", "Universytet", "Lisova"],<br />
+          blue: ["Minska", "Obolon", "Pochaina", "Holosiivska"],<br />
+          green: ["Syrets", "Zoloti Vorota", "Klovska", "Vidubichi"],<br />
+          };<br />
+          <br />
+          function f18() {<br />
+          let out18 = document.querySelector(".out-18");<br />
+          let input = document.querySelector(".i-18").value;<br />
+          let out = "";<br />
+          <br />
+          for (let key in a18) {<br />
+          if (input == key) {<br />
+          for (let i = 0; i < a18[key].length; i++) {<br />
+          out += a18[input][i] + " ";<br />
+          }<br />
+          break;<br />
+          }<br />
+          }<br />
+          out18.innerHTML = out;<br />
+          }<br />
+          <br />
+          document.querySelector(".b-18").onclick = f18;<br />
+        </p>
         <div class="out-18"></div>
       </section>
 
@@ -273,6 +658,34 @@ let a1 = {
           Input i-19 <input type="text" class="i-19" />
         </div>
         <button class="button-primary b-19">Task-19</button>
+        <p class="cd">
+          let a19 = {<br />
+          red: ["Akademmistechko", "Nyvky", "Universytet", "Lisova"],<br />
+          blue: ["Minska", "Obolon", "Pochaina", "Holosiivska"],<br />
+          green: ["Syrets", "Zoloti Vorota", "Klovska", "Vidubichi"],<br />
+          };<br />
+          <br />
+          function f19() {<br />
+          let out19 = document.querySelector(".out-19");<br />
+          let i19 = document.querySelector(".i-19").value;<br />
+          let out = "";<br />
+          <br />
+          for (let key in a19) {<br />
+          for (let i = 0; i < a19[key].length; i++) {<br />
+          if (a19[key][i].toLowerCase() == i19.toLowerCase()) {<br />
+          out = key;<br />
+          break;<br />
+          }<br />
+          }<br />
+          if (out.length > 0) {<br />
+          break;<br />
+          }<br />
+          }<br />
+          out19.innerHTML = out;<br />
+          }<br />
+          <br />
+          document.querySelector(".b-19").onclick = f19;<br />
+        </p>
         <div class="out-19"></div>
       </section>
 
@@ -284,6 +697,47 @@ let a1 = {
           Такие станции маркируются 2. Вывод через пробел.
         </p>
         <button class="button-primary b-20">Task-20</button>
+        <p class="cd">
+          let a20 = {<br />
+          red: [<br />
+          ["Akademmistechko", 1],<br />
+          ["Nyvky", 0],<br />
+          ["Universytet", 3],<br />
+          ["Lisova", 1],<br />
+          ],<br />
+          blue: [<br />
+          ["Minska", 1],<br />
+          ["Obolon", 0],<br />
+          ["Pochaina", 2],<br />
+          ["Holosiivska", 0],<br />
+          ],<br />
+          green: [<br />
+          ["Syrets", 1],<br />
+          ["Zoloti Vorota", 2],<br />
+          ["Klovska", 0],<br />
+          ["Vidubichi", 1],<br />
+          ],<br />
+          };<br />
+          <br />
+          function f20() {<br />
+          let out20 = document.querySelector(".out-20");<br />
+          let out = "";<br />
+          <br />
+          for (let key in a20) {<br />
+          for (let i = 0; i < a20[key].length; i++) {<br />
+          for (let k = 0; k < a20[key][i].length; k++) {<br />
+          if (a20[key][i][1] == 2) {<br />
+          out += a20[key][i][k] + " ";<br />
+          break;<br />
+          }<br />
+          }<br />
+          }<br />
+          }<br />
+          out20.innerHTML = out;<br />
+          }<br />
+          <br />
+          document.querySelector(".b-20").onclick = f20;<br />
+        </p>
         <div class="out-20"></div>
       </section>
     </div>

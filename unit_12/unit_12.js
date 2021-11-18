@@ -237,7 +237,7 @@ document.querySelector(".b-12").onclick = f12;
 let a13 = [];
 
 function f13() {
-  let out = [];
+  a13 = [];
   let s = 0;
   for (let i = 0; i < 8; i++) {
     let temp = [];
@@ -254,9 +254,9 @@ function f13() {
     } else {
       s = 0;
     }
-    out.push(temp);
+    a13.push(temp);
   }
-  console.log(out);
+  console.log(a13);
 }
 
 document.querySelector(".b-13").onclick = f13;
