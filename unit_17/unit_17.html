@@ -23,7 +23,31 @@
           переберите массив и создайте новый массив a1_res куда добавьте
           элементы данного массива умноженные на 2. Возвратите массив a1_res.
         </p>
-        <p class="cd"><br /></p>
+        <p class="cd">
+          // для решения задач используйте эти переменные!!!!!<br />
+          let a1_res = [],<br />
+          a2_res = [],<br />
+          a3_res = [],<br />
+          a4_res = [],<br />
+          a5_res = [],<br />
+          a6_res = [],<br />
+          a7_res = [],<br />
+          a8_res = [],<br />
+          a11_res = [],<br />
+          a15_res = [];<br />
+          let a1 = [4, 5, 6, 7, 12, 34, 56, 78, 90, 11];<br />
+          <br />
+          function t1() {<br />
+          a1_res = a1.map((elem) => {<br />
+          return elem * 2;<br />
+          });<br />
+          return a1_res;<br />
+          }<br />
+          <br />
+          document.querySelector(".b-1").onclick = () => {<br />
+          console.log(t1());<br />
+          };<br />
+        </p>
         <button class="b-1 button-primary">task 1</button>
       </section>
 
@@ -35,7 +59,20 @@
           возведенные во вторую степень. Возвратите массив a2_res. Действия
           должны запускаться при вызове функции t2.
         </p>
-        <p class="cd"><br /></p>
+        <p class="cd">
+          let a2 = [2, 3, 4, 5, 10, 11, 12];<br />
+          <br />
+          function t2() {<br />
+          a2_res = a2.map((elem) => {<br />
+          return Math.pow(elem, 2);<br />
+          });<br />
+          return a2_res;<br />
+          }<br />
+          <br />
+          document.querySelector(".b-2").onclick = () => {<br />
+          console.log(t2());<br />
+          };<br />
+        </p>
         <button class="b-2 button-primary">task 2</button>
       </section>
 
@@ -47,7 +84,20 @@
           преобразованные к числу. Возвратите a3_res. Действия должны
           запускаться при вызове функции t3.
         </p>
-        <p class="cd"><br /></p>
+        <p class="cd">
+          let a3 = [4, "3", 6, 7, "12", 34, "56", 78, 90, 11];<br />
+          <br />
+          function t3() {<br />
+          a3_res = a3.map((elem) => {<br />
+          return +elem;<br />
+          });<br />
+          return a3_res;<br />
+          }<br />
+          <br />
+          document.querySelector(".b-3").onclick = () => {<br />
+          console.log(t3());<br />
+          };<br />
+        </p>
         <button class="b-3 button-primary">task 3</button>
       </section>
 
@@ -58,7 +108,22 @@
           новый массив a4_res, куда добавить только числа из массива t4. Функция
           должна возвращать a4_res.
         </p>
-        <p class="cd"><br /></p>
+        <p class="cd">
+          let a4 = [4, "3", 6, 7, "12", 34, "56", 78, 90, 11];<br />
+          <br />
+          function t4() {<br />
+          a4_res = a4.filter((elem) => {<br />
+          if (typeof elem === "number") {<br />
+          return true;<br />
+          }<br />
+          });<br />
+          return a4_res;<br />
+          }<br />
+          <br />
+          document.querySelector(".b-4").onclick = () => {<br />
+          console.log(t4());<br />
+          };<br />
+        </p>
         <button class="b-4 button-primary">task 4</button>
       </section>
 
@@ -71,7 +136,22 @@
           Проверьте, чтобы функция корректно работала со строками, т.е. '6' не
           должно попасть в результирующий массив.
         </p>
-        <p class="cd"><br /></p>
+        <p class="cd">
+          let a5 = [3, 14, 15, 92, "6"];<br />
+          <br />
+          function t5() {<br />
+          a5_res = a5.filter((elem) => {<br />
+          if (elem % 2 == 0 && typeof elem === "number") {<br />
+          return true;<br />
+          }<br />
+          });<br />
+          return a5_res;<br />
+          }<br />
+          <br />
+          document.querySelector(".b-5").onclick = () => {<br />
+          console.log(t5());<br />
+          };<br />
+        </p>
         <button class="b-5 button-primary">task 5</button>
       </section>
 
@@ -83,7 +163,22 @@
           только числа из a6, которые больше 14. Возвратите a6_res. Действия
           должны запускаться при вызове функции t6.
         </p>
-        <p class="cd"><br /></p>
+        <p class="cd">
+          let a6 = [3, 14, 15, 92, "6", "5", "hello", 32];<br />
+          <br />
+          function t6() {<br />
+          a6_res = a6.filter((elem) => {<br />
+          if (elem > 14 && typeof elem === "number") {<br />
+          return true;<br />
+          }<br />
+          });<br />
+          return a6_res;<br />
+          }<br />
+          <br />
+          document.querySelector(".b-6").onclick = () => {<br />
+          console.log(t6());<br />
+          };<br />
+        </p>
         <button class="b-6 button-primary">task 6</button>
       </section>
 
@@ -96,7 +191,25 @@
           нижнему регистру. Действия должны запускаться при вызове функции t7.
           Функция должна возвращать a7_res.
         </p>
-        <p class="cd"><br /></p>
+        <p class="cd">
+          let a7 = [<br />
+          "Alto`s Adventure",<br />
+          "Angry Birds 2",<br />
+          "Anno 2205",<br />
+          "Assassin`s Creed Chronicles",<br />
+          ];<br />
+          <br />
+          function t7() {<br />
+          a7_res = a7.map((elem) => {<br />
+          return elem.toLowerCase();<br />
+          });<br />
+          return a7_res;<br />
+          }<br />
+          <br />
+          document.querySelector(".b-7").onclick = () => {<br />
+          console.log(t7());<br />
+          };<br />
+        </p>
         <button class="b-7 button-primary">task 7</button>
       </section>
 
@@ -109,7 +222,23 @@
           работы функции в a8_res должны быть [1, 3, 5]. Функция должна
           возвращать a8_res.
         </p>
-        <p class="cd"><br /></p>
+        <p class="cd">
+          let a8 = [3, 14, 15, 92, 7, 32, 59];<br />
+          <br />
+          function t8() {<br />
+          a8_res = [];<br />
+          for (let i = 0; i < a8.length; i++) {<br />
+          if (a8[i] % 2 === 0) {<br />
+          a8_res.push(i);<br />
+          }<br />
+          }<br />
+          return a8_res;<br />
+          }<br />
+          <br />
+          document.querySelector(".b-8").onclick = () => {<br />
+          console.log(t8());<br />
+          };<br />
+        </p>
         <button class="b-8 button-primary">task 8</button>
       </section>
 
@@ -121,7 +250,26 @@
           и преобразуйте все записи в массиве в нижний регистр. Действия должны
           запускаться при вызове функции t9. Функция должна возвращать a9.
         </p>
-        <p class="cd"><br /></p>
+        <p class="cd">
+          let a9 = [<br />
+          "Quantum Break",<br />
+          "Gears of War 4",<br />
+          "Mass Effect: Andromeda",<br />
+          "Far Cry Primal",<br />
+          ];<br />
+          <br />
+          function t9() {<br />
+          let a9_res = [];<br />
+          a9.forEach((e) => {<br />
+          a9_res.push(e.toLowerCase());<br />
+          });<br />
+          return a9_res;<br />
+          }<br />
+          <br />
+          document.querySelector(".b-9").onclick = () => {<br />
+          console.log(t9());<br />
+          };<br />
+        </p>
         <button class="b-9 button-primary">task 9</button>
       </section>
 
@@ -134,7 +282,22 @@
           Для данного примера результат должен выглядеть так: [2, 13, 14, 0, 9,
           5, 0, 0, 14].
         </p>
-        <p class="cd"><br /></p>
+        <p class="cd">
+          let a10 = [2, 13, 14, -7, 9, 5, 0, -2, 14];<br />
+          <br />
+          function t10() {<br />
+          a10.forEach((e, i) => {<br />
+          if (e < 0) {<br />
+          a10[i] = 0;<br />
+          }<br />
+          });<br />
+          return a10;<br />
+          }<br />
+          <br />
+          document.querySelector(".b-10").onclick = () => {<br />
+          console.log(t10());<br />
+          };<br />
+        </p>
         <button class="b-10 button-primary">task 10</button>
       </section>
 
@@ -146,7 +309,22 @@
           только те элементы массива ИНДЕКС которых - четный. Возвратите
           a11_res.
         </p>
-        <p class="cd"><br /></p>
+        <p class="cd">
+          let a11 = [2, 13, 14, -7, 9, 5, 0, -2, 14];<br />
+          <br />
+          function t11() {<br />
+          a11_res = a11.filter((elem, index) => {<br />
+          if (index % 2 === 0) {<br />
+          return true;<br />
+          }<br />
+          });<br />
+          return a11_res;<br />
+          }<br />
+          <br />
+          document.querySelector(".b-11").onclick = () => {<br />
+          console.log(t11());<br />
+          };<br />
+        </p>
         <button class="b-11 button-primary">task 11</button>
       </section>
 
@@ -157,7 +335,19 @@
           метода Array.isArray определите является ли переменная a12 массивом.
           Если да - то функция возврaщает true, если нет false.
         </p>
-        <p class="cd"><br /></p>
+        <p class="cd">
+          let a12 = [2, 13, 14, -7, 9, 5, 0, -2, 14];<br />
+          // a12 = 8; // на этой переменной можно проверить работает или нет
+          ваша функция.<br />
+          <br />
+          function t12() {<br />
+          return Array.isArray(a12);<br />
+          }<br />
+          <br />
+          document.querySelector(".b-12").onclick = () => {<br />
+          console.log(t12());<br />
+          };<br />
+        </p>
         <button class="b-12 button-primary">task 12</button>
       </section>
 
@@ -169,7 +359,18 @@
           a13_num в массиве. Если да - то функция возврaщает true, если нет
           false.
         </p>
-        <p class="cd"><br /></p>
+        <p class="cd">
+          let a13 = [2, 13, 14, -7, 9, 5, 0, -2, 14];<br />
+          let a13_num = 9;<br />
+          <br />
+          function t13() {<br />
+          return a13.includes(a13_num);<br />
+          }<br />
+          <br />
+          document.querySelector(".b-13").onclick = () => {<br />
+          console.log(t13());<br />
+          };<br />
+        </p>
         <button class="b-13 button-primary">task 13</button>
       </section>
 
@@ -183,7 +384,23 @@
           если в a14_sym будет строка 'd' то возвратить true, однако и на строку
           'D' тоже возвратить true.
         </p>
-        <p class="cd"><br /></p>
+        <p class="cd">
+          let a14 = ["c", "C", "d", "e", "E"];<br />
+          let a14_sym = "e";<br />
+          <br />
+          function t14() {<br />
+          let arr14 = [];<br />
+          a14.forEach((e) => {<br />
+          arr14.push(e.toLowerCase());<br />
+          return arr14;<br />
+          });<br />
+          return arr14.includes(a14_sym.toLowerCase());<br />
+          }<br />
+          <br />
+          document.querySelector(".b-14").onclick = () => {<br />
+          console.log(t14());<br />
+          };<br />
+        </p>
         <button class="b-14 button-primary">task 14</button>
       </section>
 
@@ -195,7 +412,41 @@
           номер паспорта (pnum) которых не пустая строка и длина номера - 6
           символов. Функция должна возвращать a15_res.
         </p>
-        <p class="cd"><br /></p>
+        <p class="cd">
+          let a15 = [<br />
+          {<br />
+          name: "ivanov",<br />
+          pnum: "tr7862",<br />
+          },<br />
+          {<br />
+          name: "petrov",<br />
+          pnum: "",<br />
+          },<br />
+          {<br />
+          name: "sedanov",<br />
+          pnum: "im7961",<br />
+          },<br />
+          {<br />
+          name: "dou",<br />
+          pnum: "tr786259",<br />
+          },<br />
+          ];<br />
+          <br />
+          function t15() {<br />
+          let a15_res = [];<br />
+          a15_res = a15.filter((item) => {<br />
+          if (item["pnum"].length == 6) {<br />
+          return true;<br />
+          }<br />
+          });<br />
+          <br />
+          return a15_res;<br />
+          }<br />
+          <br />
+          document.querySelector(".b-15").onclick = () => {<br />
+          console.log(t15());<br />
+          };<br />
+        </p>
         <button class="b-15 button-primary">task 15</button>
       </section>
 

@@ -127,7 +127,7 @@ let a7 = [
 
 function t7() {
   a7_res = a7.map((elem) => {
-    return elem;
+    return elem.toLowerCase();
   });
   return a7_res;
 }
@@ -202,7 +202,7 @@ let a11 = [2, 13, 14, -7, 9, 5, 0, -2, 14];
 
 function t11() {
   a11_res = a11.filter((elem, index) => {
-    if (index % 2 === 0 && index !== 0) {
+    if (index % 2 === 0) {
       return true;
     }
   });
