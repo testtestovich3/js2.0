@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://unpkg.com/mustard-ui@latest/dist/css/mustard-ui.min.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="https://itgid.info/css/skeleton.css" />
+    <link rel="stylesheet" href="https://itgid.info/css/style_js20.css" />
+    <!-- Ночной режим CSS удалите комментарий -->
+    <!-- <link rel="stylesheet" href="https://itgid.info/css/night.css" /> -->
+    <title>Unit 18</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Unit 18. Join, Split, ForEach</h1>
+
+        <section>
+            <p><b>Task 01.</b> Дан массив a1 = [4,5,6,7,12,34,56,78,90,11] - с помощью forEach переберите массив и
+                создайте новый массив a1_res куда добавьте элементы данного массива умноженные на 2. Действия должны
+                запускаться при вызове функции t1.</p>
+            <button class="b-1 button-primary">task 1</button>
+              <p class="cd">function t1() {<br> 
+    let a1 = [4, 5, 6, 7, 12, 34, 56, 78, 90, 11];<br> 
+    a1.forEach(elem => {<br> 
+        a1_res.push(elem * 2);<br> 
+    });<br> 
+    document.querySelector('.out-1').innerHTML = a1_res;<br> 
+}<br> 
+<br> 
+document.querySelector('.b-1').onclick = t1;  <br>              
+            </p>
+            <div class="out-1">
+            </div>
+        </section>
+
+        <section>
+            <p><b>Task 02.</b> Дан массив a1 = [2,3,4,5,10,11,12] - с помощью forEach переберите массив и
+                создайте новый массив a2_res куда добавьте элементы данного массива деленные на 2. Действия должны
+                запускаться при вызове функции t2.</p>
+            <button class="b-2 button-primary">task 2</button>
+              <p class="cd"> function t2() {<br> 
+  let a1 = [2, 3, 4, 5, 10, 11, 12];<br> 
+  let out = a1.forEach((elem) => {<br> 
+    a2_res.push(elem / 2);<br> 
+  });<br> 
+  document.querySelector(".out-2").innerHTML = a2_res;<br> 
+}<br> 
+document.querySelector(".b-2").onclick = t2; <br>              
+            </p>
+            <div class="out-2">
+            </div>
+        </section>
+
+        <section>
+            <p><b>Task 03.</b> Дан массив a3 = [2, 'hello', 3, 'hi', 4, 'Mazai'] - с помощью forEach переберите массив и
+                создайте новый массив a3_res куда добавьте элементы данного массива являющиеся числом. Запускаться
+                решение должно при вызове функции t3.</p>
+            <button class="b-3 button-primary">task 3</button>
+              <p class="cd"> function t3() {<br> 
+  let a3 = [2, "hello", 3, "hi", 4, "Mazai"];<br> 
+  let out = a3.forEach((elem) => {<br> 
+    if (typeof elem === "number") a3_res.push(elem);<br> 
+  });<br> 
+  document.querySelector(".out-3").innerHTML = a3_res;<br> 
+}<br> 
+document.querySelector(".b-3").onclick = t3; <br>              
+            </p>
+            <div class="out-3">
+            </div>
+        </section>
+
+        <section>
+            <p><b>Task 04.</b> На странице созданы 3 span.task-4 c атрибутом data. С помощью forEach переберите их и
+                добавьте атрибуты в массив a4_res Запускаться решение должно при вызове функции t4.</p>
+            <button class="b-4 button-primary">task 4</button>
+            <div>
+                <span class="task-4" data="1">One span with data</span>
+                <span class="task-4" data="34">Two span with data</span>
+                <span class="task-4" data="66">Thre span with data</span>
+            </div>
+              <p class="cd">function t4() {<br> 
+  let spanS = document.querySelectorAll(".task-4");<br> 
+  let out = spanS.forEach((elem) => {<br> 
+    a4_res.push(elem.getAttribute("data"));<br> 
+  });<br> 
+  document.querySelector(".out-4").innerHTML = a4_res;<br> 
+}<br> 
+document.querySelector(".b-4").onclick = t4;  <br>              
+            </p>
+            <div class="out-4">
+            </div>
+        </section>
+
+        <section>
+            <p><b>Task 05.</b> На странице созданы 3 p.task-5 c атрибутом data. С помощью forEach переберите их и
+                добавьте событие клик. Напишите функцию t5, которая будет запускаться при клике и добавлять атрибут data
+                элемента, по которому кликнули в массив a5_res.</p>
+            <div>
+                <p class="task-5" data="1">One p with data</p>
+                <p class="task-5" data="34">Two p with data</p>
+                <p class="task-5" data="66">Thre p with data</p>
+            </div>
+              <p class="cd"> function t5() {<br> 
+  let out = a5_res.push(this.getAttribute("data"));<br> 
+  document.querySelector(".out-5").innerHTML = a5_res;<br> 
+}<br> 
+document.querySelectorAll(".task-5").forEach((elem) => {<br> 
+  elem.onclick = t5;<br> 
+}); <br>              
+            </p>
+            <div class="out-5">
+            </div>
+        </section>
+
+        <section>
+            <p><b>Task 06.</b>Дана строка str6='helloworld' - преобразуйте ее в массив и присвойте a6_res. выведите на
+                страницу. Запускаться решение должно при вызове функции t6.</p>
+            <div>
+
+                <button class="b-6 button-primary">task 6</button>
+                  <p class="cd"> function t6() {<br>
+  let str6 = "helloworld";<br>
+<br>
+  a6_res = str6.split("");<br>
+  document.querySelector(".out-6").textContent = a6_res;<br>
+}<br>
+document.querySelector(".b-6").onclick = t6; <br>              
+            </p>
+                <div class="out-6">
+                </div>
+        </section>
+
+        <section>
+            <p><b>Task 07.</b> Дана строка str7='hello world hi mazai' - преобразуйте ее в массив и разбейте по словам.
+                Причем слова не должны содержать пробелов и присвойте a6_res. выведите на страницу. Запускаться решение
+                должно при вызове функции t7.</p>
+            <div>
+
+                <button class="b-7 button-primary">task 7</button>
+                  <p class="cd"> function t7() {<br>
+  let str7 = "hello world hi mazai";<br>
+  let out = document.querySelector(".out-7");<br>
+<br>
+  a7_res = str7.split(" ");<br>
+  out.textContent = a7_res;<br>
+}<br>
+document.querySelector(".b-7").onclick = t7; <br>              
+            </p>
+                <div class="out-7">
+                </div>
+        </section>
+
+        <section>
+            <p><b>Task 08.</b> Дан массив a8 = [1,2,66,77,15] - преобразуйте его в строку. Разделитель - дефис.
+                Результат
+                присвойте a8_res. Запускаться решение должно при вызове функции t8. </p>
+            <div>
+
+                <button class="b-8 button-primary">task 8</button>
+                  <p class="cd">function t8() {<br> 
+  let a8 = [1, 2, 66, 77, 15];<br> 
+  let out = document.querySelector(".out-8");<br> 
+<br> 
+  a8_res = a8.join("-");<br> 
+  out.textContent = a8_res;<br> 
+}<br> 
+document.querySelector(".b-8").onclick = t8;  <br>              
+            </p>
+                <div class="out-8">
+                </div>
+        </section>
+
+        <section>
+            <p><b>Task 09.</b> Дан массив a9 = [[hi, mahai], [test, best]] - преобразуйте его в строку. Разделитель -
+                дефис. Результат присвойте a9_res. Запускаться решение должно при вызове функции t9. Допускается лишний
+                дефис в конце строки!!!</p>
+            <div>
+
+                <button class="b-9 button-primary">task 9</button>
+                  <p class="cd"> function t9() {<br> 
+  let a9 = [<br> 
+    ["hi", "mahai"],<br> 
+    ["test", "best"],<br> 
+  ];<br> 
+  let out = document.querySelector(".out-9");<br> 
+<br> 
+  a9_res = [].concat(...a9).join("-");<br> 
+  out.textContent = a9_res;<br> 
+}<br> 
+document.querySelector(".b-9").onclick = t9; <br>              
+            </p>
+                <div class="out-9">
+                </div>
+        </section>
+
+        <section>
+            <p><b>Task 10.</b> Дан массив a10 = {name: ivan, age: 15, sex: 1, id: 45} - преобразуйте его в GET строку
+                (GET параметры). Найдите описание что такое GET строка самостоятельно. Разделитель - амперсанд.
+                Результат присвойте a10_res. Запускаться решение должно при вызове функции t10. Допускается лишний
+                амперсанд в конце строки!!! </p>
+            <div>
+
+                <button class="b-10 button-primary">task 10</button>
+                  <p class="cd"> function t10() {<br>
+  let a10 = { name: "ivan", age: 15, sex: 1, id: 45 };<br>
+  let out = document.querySelector(".out-10");<br>
+<br>
+  for (let key in a10) {<br>
+    a10_res += `${key}=${a10[key]}&`;<br>
+  }<br>
+  out.textContent = a10_res;<br>
+}<br>
+document.querySelector(".b-10").onclick = t10; <br>              
+            </p>
+                <div class="out-10">
+                </div>
+        </section>
+
+    </div>
+
+    <script src="unit_18.js"></script>
+</body>
+
+</html>

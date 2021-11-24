@@ -35,7 +35,20 @@
 </pre>
             <p>где звездочки рисуются с помощью внутреннего цикла от 0 до 3, а _ с помощью внешнего.</p>
             <button class="button-primary b-1">Task-1</button>
-             <p class="cd">  <br>              
+             <p class="cd">  function t1() {<br>
+  let arc1 = "";<br>
+  let out1 = document.querySelector(".out-1");<br>
+<br>
+  for (let i = 0; i < 3; i++) {<br>
+    for (let k = 0; k < 3; k++) {<br>
+      arc1 += "*";<br>
+    }<br>
+    arc1 += "_";<br>
+  }<br>
+  out1.innerHTML = arc1;<br>
+}<br>
+<br>
+document.querySelector(".b-1").onclick = t1;<br>              
             </p>
             <div class="out-1"></div>
         </section>
@@ -54,7 +67,21 @@
             <p>Решить задачу с помощью вложенных циклов. Внешний цикл выводит цифры и перенос строки br, , второй
                 звездочки, знак подчеркивания и знак переноса.</p>
             <button class="button-primary b-2">Task-2</button>
-                <p class="cd">  <br>              
+                <p class="cd">function t2() {<br>   
+	let arc2 = '';<br>   
+	let out2 = document.querySelector('.out-2');<br>   
+<br>   
+	for (let i = 1; i < 4; i++) {<br>   
+		arc2 += i + '[br]';<br>   
+		for (let k = 0; k < 3; k++) {<br>   
+			arc2 += '*_';<br>   
+		}<br>   
+		arc2 += '[br]';<br>   
+	}<br>   
+	out2.innerHTML = arc2;<br>   
+}<br>   
+<br>   
+document.querySelector('.b-2').onclick = t2;  <br>              
             </p>
             <div class="out-2"></div>
         </section>
@@ -71,7 +98,20 @@
             <p>Решить задачу с помощью вложенных циклов. Внешний цикл выводит перенос строки br, внутренний - звездочки,
                 знак подчеркивания.</p>
             <button class="button-primary b-3">Task-3</button>
-                <p class="cd">  <br>              
+                <p class="cd"> function t3() { <br>  
+	let arc3 = ''; <br>  
+	let out3 = document.querySelector('.out-3'); <br>  
+ <br>  
+	for (let i = 0; i < 4; i++) { <br>  
+		for (let k = 0; k < 3; k++) { <br>  
+			arc3 += '*_'; <br>  
+		} <br>  
+		arc3 += '[br]'; <br>  
+	} <br>  
+	out3.innerHTML = arc3; <br>  
+} <br>  
+ <br>  
+document.querySelector('.b-3').onclick = t3; <br>              
             </p>
             <div class="out-3"></div>
         </section>
@@ -83,7 +123,20 @@
                 1_1 2 3 4 5 2_1 2 3 4 5 3_1 2 3 4 5
 </pre>
             <button class="button-primary b-4">Task-4</button>
-                <p class="cd">  <br>              
+                <p class="cd">function t4() {<br> 
+	let arc4 = '';<br> 
+	let out4 = document.querySelector('.out-4');<br> 
+<br> 
+	for (let i = 1; i < 4; i++) {<br> 
+		arc4 += i + '_';<br> 
+		for (let k = 1; k < 6; k++) {<br> 
+			arc4 += k + ' ';<br> 
+		}<br> 
+	}<br> 
+	out4.innerHTML = arc4;<br> 
+}<br> 
+<br> 
+document.querySelector('.b-4').onclick = t4;  <br>              
             </p>
             <div class="out-4"></div>
         </section>
@@ -98,7 +151,25 @@
 </pre>
             <p>Внешний цикл выводит перенос строки br. Вложенный цикл от 0 до 6 выводит либо 0 либо 1.</p>
             <button class="button-primary b-5">Task-5</button>
-                <p class="cd">  <br>              
+                <p class="cd"> function t5() {<br> 
+	let arc5 = '';<br> 
+	let out5 = document.querySelector('.out-5');<br> 
+<br> 
+	for (let i = 0; i < 3; i++) {<br> 
+		for (let k = 0; k < 6; k++) {<br> 
+			if (k % 2 === 0) {<br> 
+				arc5 += 1;<br> 
+			}<br> 
+			else {<br> 
+				arc5 += 0;<br> 
+			}<br> 
+		}<br> 
+		arc5 += '[br]';<br> 
+	}<br> 
+	out5.innerHTML = arc5;<br> 
+}<br> 
+<br> 
+document.querySelector('.b-5').onclick = t5; <br>              
             </p>
             <div class="out-5"></div>
         </section>
@@ -113,7 +184,28 @@
 </pre>
             <p>Внешний цикл выводит перенос строки br. Вложенный цикл от 0 до 6 выводит либо 0 либо 1 либо х.</p>
             <button class="button-primary b-6">Task-6</button>
-                <p class="cd">  <br>              
+                <p class="cd"> function t6() {<br> 
+	let arc6 = '';<br> 
+	let out6 = document.querySelector('.out-6');<br> 
+<br> 
+	for (let i = 0; i < 3; i++) {<br> 
+		for (let k = 0; k < 6; k++) {<br> 
+			if (k === 0 || k === 4) {<br> 
+				arc6 += 1;<br> 
+			}<br> 
+			if (k === 1 || k === 3) {<br> 
+				arc6 += 0;<br> 
+			}<br> 
+			if (k === 2 || k === 5) {<br> 
+				arc6 += 'x';<br> 
+			}<br> 
+		}<br> 
+		arc6 += '[br]';<br> 
+	}<br> 
+	out6.innerHTML = arc6;<br> 
+}<br> 
+<br> 
+document.querySelector('.b-6').onclick = t6; <br>              
             </p>
             <div class="out-6"></div>
         </section>
@@ -128,7 +220,20 @@
             </pre>
             <p>Внешний цикл выводит перенос строки br. Вложенный цикл запускается от нуля до i и рисует звездочку.</p>
             <button class="button-primary b-7">Task-7</button>
-                <p class="cd">  <br>              
+                <p class="cd">function t7() {<br>
+	let arc7 = '';<br>
+	let out7 = document.querySelector('.out-7');<br>
+<br>
+	for (let i = 1; i < 5; i++) {<br>
+		for (let k = 0; k < i; k++) {<br>
+			arc7 += '*';<br>
+		}<br>
+		arc7 += '[br]';<br>
+	}<br>
+	out7.innerHTML = arc7;<br>
+}<br>
+<br>
+document.querySelector('.b-7').onclick = t7;  <br>              
             </p>
             <div class="out-7"></div>
         </section>
@@ -146,7 +251,20 @@
 </pre>
             <p>Внешний цикл выводит перенос строки br. Вложенный цикл рисует звездочки. </p>
             <button class="button-primary b-8">Task-8</button>
-                <p class="cd">  <br>              
+                <p class="cd"> function t8() {<br>
+	let arc8 = '';<br>
+	let out8 = document.querySelector('.out-8');<br>
+<br>
+	for (let i = 5; i > 0; i--) {<br>
+		for (let k = 0; k < i; k++) {<br>
+			arc8 += '*';<br>
+		}<br>
+		arc8 += '[br]';<br>
+	}<br>
+	out8.innerHTML = arc8;<br>
+}<br>
+<br>
+document.querySelector('.b-8').onclick = t8; <br>              
             </p>
             <div class="out-8"></div>
         </section>
@@ -163,7 +281,20 @@
 </pre>
             <p>Внешний цикл выводит перенос строки br. Вложенный цикл рисует цифры</p>
             <button class="button-primary b-9">Task-9</button>
-                <p class="cd">  <br>              
+                <p class="cd"> function t9() {<br> 
+	let arc9 = '';<br> 
+	let out9 = document.querySelector('.out-9');<br> 
+<br> 
+	for (let i = 1; i < 7; i++) {<br> 
+		for (let k = 1; k < i; k++) {<br> 
+			arc9 += k + ' ';<br> 
+		}<br> 
+		arc9 += '[br]';<br> 
+	}<br> 
+	out9.innerHTML = arc9;<br> 
+}<br> 
+<br> 
+document.querySelector('.b-9').onclick = t9; <br>              
             </p>
             <div class="out-9"></div>
         </section>
@@ -182,7 +313,23 @@
             <p>Вложенный цикл рисует цифры от 0 до 9. Обратите внимание, что первый ряд - есть ведущий нуль. Здесь все
                 просто - проверили, если число меньше 10 - то конкатенируем нуль.</p>
             <button class="button-primary b-10">Task-10</button>
-                <p class="cd">  <br>              
+                <p class="cd">function t10() {<br> 
+	let arc10 = '';<br> 
+	let out10 = document.querySelector('.out-10');<br> 
+<br> 
+	for (let i = 0; i < 5; i++) {<br> 
+		for (let k = 1; k <= 10; k++) {<br> 
+			if (k < 10 && i == 0) {<br> 
+				arc10 += 0;<br> 
+			}<br> 
+			arc10 += (i * 10 + k) + ' ';<br> 
+		}<br> 
+		arc10 += '[br]';<br> 
+	}<br> 
+	out10.innerHTML = arc10;<br> 
+}<br> 
+<br> 
+document.querySelector('.b-10').onclick = t10;  <br>              
             </p>
             <div class="out-10"></div>
         </section>
