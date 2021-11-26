@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/mustard-ui@latest/dist/css/mustard-ui.min.css"
+    />
+    <link rel="stylesheet" href="https://itgid.info/css/skeleton.css" />
+    <link rel="stylesheet" href="https://itgid.info/css/style_js20.css" />
+    <!-- Ночной режим CSS удалите комментарий -->
+    <!-- <link rel="stylesheet" href="https://itgid.info/css/night.css"> -->
+    <link rel="stylesheet" href="style.css" />
+    <title>Unit 22</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Unit 22. Try Catch</h1>
+      <h2>Курс js2.itgid.info</h2>
+      <p>
+        Все задания выполняются по правилам - вывод в элемент out-n, где n -
+        номер task. Каждое задание находится внутри функции tN где n - номер
+        task. Каждый вывод запускается по нажатию кнопки b-N, где n - номер
+        task.
+      </p>
+      <section>
+        <p><b>Task 1.</b></p>
+        <p>
+          Добавьте в код функции try catch так, чтобы вместо ошибки выводилось в
+          out-1 цифра 1.
+        </p>
+        <button class="button-primary b-1">Task-1</button>
+        <p class="cd">
+          function t1() {<br />
+          let a = 22;<br />
+          try {<br />
+          let c = a + d;<br />
+          } catch (error) {<br />
+          let out1 = document.querySelector(".out-1");<br />
+          out1.innerHTML = 1;<br />
+          }<br />
+          }<br />
+          <br />
+          document.querySelector(".b-1").onclick = t1;<br />
+        </p>
+        <div class="out-1"></div>
+      </section>
+
+      <section>
+        <p><b>Task 2.</b></p>
+        <p>
+          Добавьте в код функции try catch так, чтобы вместо ошибки был вывод
+          результата в out-2.
+        </p>
+        <button class="button-primary b-2">Task-2</button>
+        <p class="cd">
+          function t2() {<br />
+          let a = 4;<br />
+          let b = 5;<br />
+          try {<br />
+          document.querySelector(".out-2222222").innerHTML = a * b;<br />
+          } catch (error) {<br />
+          let out2 = document.querySelector(".out-2");<br />
+          <br />
+          out2.innerHTML = a * b;<br />
+          }<br />
+          }<br />
+          <br />
+          document.querySelector(".b-2").onclick = t2;<br />
+        </p>
+        <div class="out-2"></div>
+      </section>
+
+      <section>
+        <p><b>Task 3.</b></p>
+        <p>
+          Добавьте в код функции try catch так, чтобы вместо ошибки был вывод
+          результата в out-3. Если его нет - создавайте в коде. т.е. вы не
+          знаете будет или нет он в html.
+        </p>
+        <p class="cd">
+          function t3() {<br />
+          let a = 4;<br />
+          let b = 5;<br />
+          try {<br />
+          document.querySelector(".out-3").innerHTML = a * b;<br />
+          } catch {<br />
+          let div3 = document.createElement("div");<br />
+          div3.classList.add("out-3");<br />
+          let sects = document.getElementsByTagName("section");<br />
+          sects[2].append(div3);<br />
+          document.querySelector(".out-3").innerHTML = a * b;<br />
+          }<br />
+          }<br />
+          <br />
+          document.querySelector(".b-3").onclick = t3;<br />
+        </p>
+        <button class="button-primary b-3">Task-3</button>
+      </section>
+
+      <section>
+        <p><b>Task 4.</b></p>
+        <p>
+          Дана переменная a. В переменную делается push. Используя try catch
+          отловите ошибки если они есть. Если ошибка вывести в out-4 число 0.
+          Если не ошибка - то результирующий массив через пробел.
+        </p>
+        <button class="button-primary b-4">Task-4</button>
+        <p class="cd">
+          let a = [2, 3, 4];<br />
+          // a = 5;<br />
+          <br />
+          function t4() {<br />
+          try {<br />
+          a.push(7);<br />
+          document.querySelector(".out-4").innerHTML = a.join(" ");<br />
+          } catch (Err) {<br />
+          console.log(a);<br />
+          document.querySelector(".out-4").innerHTML = 0;<br />
+          }<br />
+          }<br />
+          <br />
+          document.querySelector(".b-4").onclick = t4;<br />
+        </p>
+        <div class="out-4"></div>
+      </section>
+
+      <section>
+        <p><b>Task 5.</b></p>
+        <p>
+          Добавьте try, catch, finnaly так, чтобы в out-5 выводился 0 при
+          ошибки. А в out-5-1 всегда выводилось слово 'finnaly';
+        </p>
+        <button class="button-primary b-5">Task-5</button>
+        <p class="cd">
+          function t5() {<br />
+          let p = document.querySelectorAll("p");<br />
+          try {<br />
+          p.push(3);<br />
+          } catch (error) {<br />
+          console.log(0);<br />
+          } finally {<br />
+          document.querySelector(".out-5").innerHTML = 1;<br />
+          }<br />
+          }<br />
+          <br />
+          document.querySelector(".b-5").onclick = t5;<br />
+        </p>
+        <div class="out-5"></div>
+        <div class="out-5-1"></div>
+      </section>
+    </div>
+
+    <script src="unit_22.js"></script>
+  </body>
+</html>
