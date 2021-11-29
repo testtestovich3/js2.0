@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/mustard-ui@latest/dist/css/mustard-ui.min.css"
+    />
+    <link rel="stylesheet" href="https://itgid.info/css/skeleton.css" />
+    <link rel="stylesheet" href="https://itgid.info/css/style_js20.css" />
+    <!-- Ночной режим CSS удалите комментарий -->
+    <!-- <link rel="stylesheet" href="https://itgid.info/css/night.css"> -->
+    <link rel="stylesheet" href="style.css" />
+    <title>Unit 26</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Unit 26. Fetch</h1>
+
+      <section>
+        <p><b>Task 1.</b></p>
+        <p>
+          Отправьте GET запрос (fetch) на сайт
+          http://getpost.itgid.info/index2.php. В качестве action укажите 1.
+          Выведите в out-1 результат. Запускаться функция должна по нажатию b-1.
+        </p>
+        <button class="button-primary b-1">Task-1</button>
+        <p class="cd">
+          function t1() {<br />
+          fetch(<br />
+          "http://getpost.itgid.info/index2.php?auth=bc4d74a9319730bc6a884298&action=1"<br />
+          )<br />
+          .then((response) => {<br />
+          return response.text();<br />
+          })<br />
+          .then((data) => {<br />
+          document.querySelector(".out-1").textContent = data;<br />
+          });<br />
+          }<br />
+          document.querySelector(".b-1").addEventListener("click", t1);<br />
+        </p>
+        <div class="out-1"></div>
+      </section>
+
+      <section>
+        <p><b>Task 2.</b></p>
+        <p>
+          Отправьте GET запрос (fetch) на сайт
+          http://getpost.itgid.info/index2.php. В качестве action укажите 2.
+          Добавьте параметр name с вашим именем на латинице. Если все сделано
+          верно, сервер пришлет строку hello ваше имя. Выведите в out-2
+          результат. Запускаться функция должна по нажатию b-2.
+        </p>
+        <button class="button-primary b-2">Task-2</button>
+        <p class="cd">
+          function t2() {<br />
+          fetch(<br />
+          "http://getpost.itgid.info/index2.php?auth=bc4d74a9319730bc6a884298&action=2&name=Alexey"<br />
+          )<br />
+          .then((response) => {<br />
+          return response.text();<br />
+          })<br />
+          .then((data) => {<br />
+          document.querySelector(".out-2").textContent = data;<br />
+          });<br />
+          }<br />
+          document.querySelector(".b-2").addEventListener("click", t2);<br />
+        </p>
+        <div class="out-2"></div>
+      </section>
+
+      <section>
+        <p><b>Task 3.</b></p>
+        <p>
+          Отправьте GET запрос (fetch) на сайт
+          http://getpost.itgid.info/index2.php. В качестве action укажите 3.
+          Добавьте параметр num1 и num2 содержащие числа. Если все сделано
+          верно, сервер вернет сумму чисел. Выведите в out-3 результат.
+          Запускаться функция должна по нажатию b-3.
+        </p>
+        <button class="button-primary b-3">Task-3</button>
+        <p class="cd">
+          function t3() {<br />
+          fetch(<br />
+          "http://getpost.itgid.info/index2.php?auth=bc4d74a9319730bc6a884298&action=3&num1=2&num2=4"<br />
+          )<br />
+          .then((response) => {<br />
+          return response.text();<br />
+          })<br />
+          .then((data) => {<br />
+          document.querySelector(".out-3").textContent = data;<br />
+          });<br />
+          }<br />
+          document.querySelector(".b-3").addEventListener("click", t3);<br />
+        </p>
+        <div class="out-3"></div>
+      </section>
+
+      <section>
+        <p><b>Task 4.</b></p>
+        <p>
+          Отправьте GET запрос (fetch) на сайт
+          http://getpost.itgid.info/index2.php. В качестве action укажите 4.
+          Добавьте параметр num1 и num2 содержащие числа. Если все сделано
+          верно, сервер вернет случайное число в заданном диапазоне. Не
+          забывайте указывать параметр auth (ключ в чате). Выведите в out-4
+          результат. Запускаться функция должна по нажатию b-4.
+        </p>
+        <button class="button-primary b-4">Task-4</button>
+        <p class="cd">
+          function t4() {<br />
+          fetch(<br />
+          "http://getpost.itgid.info/index2.php?auth=bc4d74a9319730bc6a884298&action=4&num1=2&num2=4"<br />
+          )<br />
+          .then((response) => {<br />
+          return response.text();<br />
+          })<br />
+          .then((data) => {<br />
+          document.querySelector(".out-4").textContent = data;<br />
+          });<br />
+          }<br />
+          document.querySelector(".b-4").addEventListener("click", t4);<br />
+        </p>
+        <div class="out-4"></div>
+      </section>
+
+      <section>
+        <p><b>Task 5.</b></p>
+        <p>
+          Отправьте GET запрос (fetch) на сайт
+          http://getpost.itgid.info/index2.php. В качестве action укажите 5.
+          Если все сделано верно, сервер вернет текущее время и дату. Не
+          забывайте указывать параметр auth (ключ в чате). Выведите в out-5
+          результат. Запускаться функция должна по нажатию b-5.
+        </p>
+        <button class="button-primary b-5">Task-5</button>
+        <p class="cd">
+          function t5() {<br />
+          fetch(<br />
+          "http://getpost.itgid.info/index2.php?auth=bc4d74a9319730bc6a884298&action=5"<br />
+          )<br />
+          .then((response) => {<br />
+          return response.text();<br />
+          })<br />
+          .then((data) => {<br />
+          document.querySelector(".out-5").textContent = data;<br />
+          });<br />
+          }<br />
+          document.querySelector(".b-5").addEventListener("click", t5);<br />
+        </p>
+        <div class="out-5"></div>
+      </section>
+
+      <section>
+        <p><b>Task 6.</b></p>
+        <p>
+          Отправьте GET запрос (fetch) на сайт
+          http://getpost.itgid.info/index2.php. В качестве action укажите 6.
+          Добавьте параметр num1 и num2 содержащие числа. Если все сделано
+          верно, сервер вернет большее число. Не забывайте указывать параметр
+          auth (ключ в чате). Выведите в out-6 результат. Запускаться функция
+          должна по нажатию b-6.
+        </p>
+        <button class="button-primary b-6">Task-6</button>
+        <p class="cd">
+          function t6() {<br />
+          fetch(<br />
+          "http://getpost.itgid.info/index2.php?auth=bc4d74a9319730bc6a884298&action=6&num1=2&num2=4"<br />
+          )<br />
+          .then((response) => {<br />
+          return response.text();<br />
+          })<br />
+          .then((data) => {<br />
+          document.querySelector(".out-6").textContent = data;<br />
+          });<br />
+          }<br />
+          document.querySelector(".b-6").addEventListener("click", t6);<br />
+        </p>
+        <div class="out-6"></div>
+      </section>
+
+      <section>
+        <p><b>Task 7.</b></p>
+        <p>
+          Отправьте GET запрос (fetch) на сайт
+          http://getpost.itgid.info/index2.php. В качестве action укажите 7.
+          Если все сделано верно, сервер случайную ссылку на изображение. Не
+          забывайте указывать параметр auth (ключ в чате). Выведите в out-7
+          результат. Запускаться функция должна по нажатию b-7.
+        </p>
+        <button class="button-primary b-7">Task-7</button>
+        <p class="cd">
+          function t7() {<br />
+          fetch(<br />
+          "http://getpost.itgid.info/index2.php?auth=bc4d74a9319730bc6a884298&action=7"<br />
+          )<br />
+          .then((response) => {<br />
+          return response.text();<br />
+          })<br />
+          .then((data) => {<br />
+          document.querySelector(".out-7").textContent = data;<br />
+          });<br />
+          }<br />
+          document.querySelector(".b-7").addEventListener("click", t7);<br />
+        </p>
+        <div class="out-7"></div>
+      </section>
+
+      <section>
+        <p><b>Task 8.</b></p>
+        <p>
+          Отправьте GET запрос (fetch) на сайт
+          http://getpost.itgid.info/index2.php. В качестве action укажите 8. В
+          качестве параметра по очереди укажите year равный году вашего
+          рождения. Если все правильно сервер вернет ваш возраст. Не забывайте
+          указывать параметр auth (ключ в чате). Выведите в out-8 результат.
+          Запускаться функция должна по нажатию b-8.
+        </p>
+
+        <button class="button-primary b-8">Task-8</button>
+        <p class="cd">
+          function t8() {<br />
+          fetch(<br />
+          "http://getpost.itgid.info/index2.php?auth=bc4d74a9319730bc6a884298&action=8&year=1994"<br />
+          )<br />
+          .then((response) => {<br />
+          return response.text();<br />
+          })<br />
+          .then((data) => {<br />
+          document.querySelector(".out-8").textContent = data;<br />
+          });<br />
+          }<br />
+          document.querySelector(".b-8").addEventListener("click", t8);<br />
+        </p>
+        <div class="out-8"></div>
+      </section>
+
+      <section>
+        <p><b>Task 9.</b></p>
+        <p>
+          Отправьте GET запрос (fetch) на сайт
+          http://getpost.itgid.info/index2.php. В качестве action укажите 9. В
+          качестве параметра по очереди укажите m = 1, d=1, y=1. Если все
+          сделано верно, сервер возвратит дату или месяц или год. Не забывайте
+          указывать параметр auth (ключ в чате). Выведите в out-9 результат.
+          Запускаться функция должна по нажатию b-9.
+        </p>
+
+        <button class="button-primary b-9">Task-9</button>
+        <p class="cd">
+          function t9() {<br />
+          fetch(<br />
+          "http://getpost.itgid.info/index2.php?auth=bc4d74a9319730bc6a884298&action=9&m=1&d=1&y=1"<br />
+          )<br />
+          .then((response) => {<br />
+          return response.text();<br />
+          })<br />
+          .then((data) => {<br />
+          document.querySelector(".out-9").textContent = data;<br />
+          });<br />
+          }<br />
+          document.querySelector(".b-9").addEventListener("click", t9);<br />
+        </p>
+        <div class="out-9"></div>
+      </section>
+
+      <section>
+        <p><b>Task 10.</b></p>
+        <p>
+          Отправьте POST запрос (fetch) на сайт
+          http://getpost.itgid.info/index2.php. В качестве action укажите 1.
+          Если все сделано верно, сервер пришлет строку hello. Не забывайте
+          указывать параметр auth (ключ в чате). Выведите в out-10 результат.
+          Запускаться функция должна по нажатию b-10.
+        </p>
+
+        <button class="button-primary b-10">Task-10</button>
+        <p class="cd">
+          function t10() {<br />
+          fetch("http://getpost.itgid.info/index2.php", {<br />
+          method: "POST",<br />
+          headers: {<br />
+          "Content-Type": "application/x-www-form-urlencoded",<br />
+          },<br />
+          body: "auth=bc4d74a9319730bc6a884298&action=1",<br />
+          })<br />
+          .then((response) => {<br />
+          return response.text();<br />
+          })<br />
+          .then((data) => {<br />
+          document.querySelector(".out-10").textContent = data;<br />
+          });<br />
+          }<br />
+          document.querySelector(".b-10").addEventListener("click", t10);<br />
+        </p>
+        <div class="out-10"></div>
+      </section>
+
+      <section>
+        <p><b>Task 11.</b></p>
+        <p>
+          Отправьте POST запрос (fetch) на сайт
+          http://getpost.itgid.info/index2.php. В качестве action укажите 2.
+          Добавьте параметр name с вашим именем на латинице. Если все сделано
+          верно, сервер пришлет строку hello ваше имя. Не забывайте указывать
+          параметр auth (ключ в чате). Выведите в out-11 результат. Запускаться
+          функция должна по нажатию b-11.
+        </p>
+
+        <button class="button-primary b-11">Task-11</button>
+        <p class="cd">
+          function t11() {<br />
+          fetch("http://getpost.itgid.info/index2.php", {<br />
+          method: "POST",<br />
+          headers: {<br />
+          "Content-Type": "application/x-www-form-urlencoded",<br />
+          },<br />
+          body: "auth=bc4d74a9319730bc6a884298&action=2&name=Alexey",<br />
+          })<br />
+          .then((response) => {<br />
+          return response.text();<br />
+          })<br />
+          .then((data) => {<br />
+          document.querySelector(".out-11").textContent = data;<br />
+          });<br />
+          }<br />
+          document.querySelector(".b-11").addEventListener("click", t11);<br />
+        </p>
+        <div class="out-11"></div>
+      </section>
+
+      <section>
+        <p><b>Task 12.</b></p>
+        <p>
+          Отправьте POST запрос (fetch) на сайт
+          http://getpost.itgid.info/index2.php. В качестве action укажите 3.
+          Добавьте параметр num1 и num2 содержащие числа. Если все сделано
+          верно, сервер вернет сумму чисел. Не забывайте указывать параметр auth
+          (ключ в чате). Выведите в out-12 результат. Запускаться функция должна
+          по нажатию b-12.
+        </p>
+
+        <button class="button-primary b-12">Task-12</button>
+        <p class="cd">
+          function t12() {<br />
+          fetch("http://getpost.itgid.info/index2.php", {<br />
+          method: "POST",<br />
+          headers: {<br />
+          "Content-Type": "application/x-www-form-urlencoded",<br />
+          },<br />
+          body: "auth=bc4d74a9319730bc6a884298&action=3&num1=2&num2=4",<br />
+          })<br />
+          .then((response) => {<br />
+          return response.text();<br />
+          })<br />
+          .then((data) => {<br />
+          document.querySelector(".out-12").textContent = data;<br />
+          });<br />
+          }<br />
+          document.querySelector(".b-12").addEventListener("click", t12);<br />
+        </p>
+        <div class="out-12"></div>
+      </section>
+
+      <section>
+        <p><b>Task 13.</b></p>
+        <p>
+          Отправьте POST запрос (fetch) на сайт
+          http://getpost.itgid.info/index2.php. В качестве action укажите 4.
+          Добавьте параметр num1 и num2 содержащие числа. Если все сделано
+          верно, сервер вернет случайное число в заданном диапазоне. Не
+          забывайте указывать параметр auth (ключ в чате). Выведите в out-13
+          результат. Запускаться функция должна по нажатию b-13.
+        </p>
+
+        <button class="button-primary b-13">Task-13</button>
+        <p class="cd">
+          function t13() {<br />
+          fetch("http://getpost.itgid.info/index2.php", {<br />
+          method: "POST",<br />
+          headers: {<br />
+          "Content-Type": "application/x-www-form-urlencoded",<br />
+          },<br />
+          body: "auth=bc4d74a9319730bc6a884298&action=4&num1=2&num2=4",<br />
+          })<br />
+          .then((response) => {<br />
+          return response.text();<br />
+          })<br />
+          .then((data) => {<br />
+          document.querySelector(".out-13").textContent = data;<br />
+          });<br />
+          }<br />
+          document.querySelector(".b-13").addEventListener("click", t13);<br />
+        </p>
+        <div class="out-13"></div>
+      </section>
+
+      <section>
+        <p><b>Task 14.</b></p>
+        <p>
+          Отправьте POST запрос (fetch) на сайт
+          http://getpost.itgid.info/index2.php. В качестве action укажите 5.
+          Если все сделано верно, сервер вернет текущее время и дату. Не
+          забывайте указывать параметр auth (ключ в чате). Выведите в out-14
+          результат. Запускаться функция должна по нажатию b-14.
+        </p>
+
+        <button class="button-primary b-14">Task-14</button>
+        <p class="cd">
+          function t14() {<br />
+          fetch("http://getpost.itgid.info/index2.php", {<br />
+          method: "POST",<br />
+          headers: {<br />
+          "Content-Type": "application/x-www-form-urlencoded",<br />
+          },<br />
+          body: "auth=bc4d74a9319730bc6a884298&action=5",<br />
+          })<br />
+          .then((response) => {<br />
+          return response.text();<br />
+          })<br />
+          .then((data) => {<br />
+          document.querySelector(".out-14").textContent = data;<br />
+          });<br />
+          }<br />
+          document.querySelector(".b-14").addEventListener("click", t14);<br />
+        </p>
+        <div class="out-14"></div>
+      </section>
+
+      <section>
+        <p><b>Task 15.</b></p>
+        <p>
+          Отправьте POST запрос (fetch) на сайт
+          http://getpost.itgid.info/index2.php. В качестве action укажите 6.
+          Добавьте параметр num1 и num2 содержащие числа. Если все сделано
+          верно, сервер вернет большее число. Не забывайте указывать параметр
+          auth (ключ в чате). Выведите в out-15 результат. Запускаться функция
+          должна по нажатию b-15.
+        </p>
+
+        <button class="button-primary b-15">Task-15</button>
+        <p class="cd">
+          function t15() {<br />
+          fetch("http://getpost.itgid.info/index2.php", {<br />
+          method: "POST",<br />
+          headers: {<br />
+          "Content-Type": "application/x-www-form-urlencoded",<br />
+          },<br />
+          body: "auth=bc4d74a9319730bc6a884298&action=6&num1=2&num2=4",<br />
+          })<br />
+          .then((response) => {<br />
+          return response.text();<br />
+          })<br />
+          .then((data) => {<br />
+          document.querySelector(".out-15").textContent = data;<br />
+          });<br />
+          }<br />
+          document.querySelector(".b-15").addEventListener("click", t15);<br />
+        </p>
+        <div class="out-15"></div>
+      </section>
+
+      <section>
+        <p><b>Task 16.</b></p>
+        <p>
+          Отправьте POST запрос (fetch) на сайт
+          http://getpost.itgid.info/index2.php. В качестве action укажите 7.
+          Если все сделано верно, сервер случайную ссылку на изображение. Не
+          забывайте указывать параметр auth (ключ в чате). Выведите в out-16
+          результат. Запускаться функция должна по нажатию b-16.
+        </p>
+        <button class="button-primary b-16">Task-16</button>
+        <p class="cd">
+          function t16() {<br />
+          fetch("http://getpost.itgid.info/index2.php", {<br />
+          method: "POST",<br />
+          headers: {<br />
+          "Content-Type": "application/x-www-form-urlencoded",<br />
+          },<br />
+          body: "auth=bc4d74a9319730bc6a884298&action=7",<br />
+          })<br />
+          .then((response) => {<br />
+          return response.text();<br />
+          })<br />
+          .then((data) => {<br />
+          document.querySelector(".out-16").textContent = data;<br />
+          });<br />
+          }<br />
+          document.querySelector(".b-16").addEventListener("click", t16);<br />
+        </p>
+        <div class="out-16"></div>
+      </section>
+
+      <section>
+        <p><b>Task 17.</b></p>
+        <p>
+          Отправьте POST запрос (fetch) на сайт
+          http://getpost.itgid.info/index2.php. В качестве action укажите 8. В
+          качестве параметра по очереди укажите year равный году вашего
+          рождения. Если все правильно сервер вернет ваш возраст. Не забывайте
+          указывать параметр auth (ключ в чате).Выведите в out-17 результат.
+          Запускаться функция должна по нажатию b-17.
+        </p>
+
+        <button class="button-primary b-17">Task-17</button>
+        <p class="cd">
+          function t17() {<br />
+          fetch("http://getpost.itgid.info/index2.php", {<br />
+          method: "POST",<br />
+          headers: {<br />
+          "Content-Type": "application/x-www-form-urlencoded",<br />
+          },<br />
+          body: "auth=bc4d74a9319730bc6a884298&action=8&year=1994",<br />
+          })<br />
+          .then((response) => {<br />
+          return response.text();<br />
+          })<br />
+          .then((data) => {<br />
+          document.querySelector(".out-17").textContent = data;<br />
+          });<br />
+          }<br />
+          document.querySelector(".b-17").addEventListener("click", t17);<br />
+        </p>
+        <div class="out-17"></div>
+      </section>
+
+      <section>
+        <p><b>Task 18.</b></p>
+        <p>
+          Отправьте POST запрос (fetch) на сайт
+          http://getpost.itgid.info/index2.php. В качестве action укажите 9. В
+          качестве параметра по очереди укажите m = 1, d=1, y=1. Если все
+          сделано верно, сервер возвратит дату или месяц или год. Не забывайте
+          указывать параметр auth (ключ в чате). Выведите в out-18 результат.
+          Запускаться функция должна по нажатию b-18.
+        </p>
+
+        <button class="button-primary b-18">Task-18</button>
+        <p class="cd">
+          function t18() {<br />
+          fetch("http://getpost.itgid.info/index2.php", {<br />
+          method: "POST",<br />
+          headers: {<br />
+          "Content-Type": "application/x-www-form-urlencoded",<br />
+          },<br />
+          body: "auth=bc4d74a9319730bc6a884298&action=9&m=1&d=1&y=1",<br />
+          })<br />
+          .then((response) => {<br />
+          return response.text();<br />
+          })<br />
+          .then((data) => {<br />
+          document.querySelector(".out-18").textContent = data;<br />
+          });<br />
+          }<br />
+          document.querySelector(".b-18").addEventListener("click", t18);<br />
+        </p>
+        <div class="out-18"></div>
+      </section>
+    </div>
+
+    <script src="unit_26.js"></script>
+  </body>
+</html>
